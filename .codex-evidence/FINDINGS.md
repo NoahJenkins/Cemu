@@ -37,3 +37,8 @@ Corruption is produced by in-title Bink under PPC (even singlecore recompiler), 
 - `singlecore-still-banded.png` — still banded under singlecore recompiler
 - `yplane-guest-autocontrast.png` / `yplane-late-guest.png` — guest Y plane dumps
 - `uplane-late-guest.png` — guest U plane dump (autocontrasted)
+
+## Interpreter A/B (decisive)
+- `--force-interpreter` on stock Cemu 2.6: Activision logo renders **clean** (no RGB banding)
+- Reproduced on two launches (`interpreter-activision-clean.png`, `interpreter-activision-clean-2.png`)
+- Singlecore recompiler still banded → not a multicore race; points at **PPC recompiler codegen** used by in-game Bink
