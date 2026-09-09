@@ -63,11 +63,12 @@ Isolate which PPC recompiler codegen path Bink hits (float / paired-single / loa
 - Diagnostic tree on Deck is still v2.6 (pre-rework PSQ_GENERIC backend); skip result there proves class, not the final main-line patch site
 
 ## PSQ_L-only vs PSQ_ST-only (v2.6 diagnostic)
-- **PSQ_L-only skip** (stores still recompiled): Activision at t30/t40 **clean** (`skippsql-rec-activision-clean.png`, `psql-skip/psql-t{30,40}.png`); log `PPCRecSkipPSQL`
-- t50 in same run looked banded again (`skippsql-rec-activision-t50-banded.png`) — treat as unresolved anomaly / possible second pass; do not over-claim from one late frame
-- **PSQ_ST-only skip**: in progress
+- **PSQ_L-only skip**: Activision t30/t40 **clean** (`skippsql-rec-activision-clean.png`); log `PPCRecSkipPSQL` (skipped larger funcs e.g. `0x029bd464`)
+- **PSQ_ST-only skip**: Activision t30/t40 also **clean** (`skippsqst-rec-activision-clean.png`); log `PPCRecSkipPSQST` (skipped small funcs e.g. `0x0204324c` — same cluster as combined PSQ skip)
+- Important: skip is **whole-function** — a function with both L and ST is fully interpreted if either op is marked. The two skip sets differ, yet each cleans t30/t40 → either multiple broken sites, or critical funcs appear in both sets via mixed ops
+- t50 was banded again under L-only and ST-only (`*-t50-banded.png`) but was clean under combined PSQ skip — timing/second-pass anomaly; needs a tighter capture before concluding
 
 ## Next
-1. Finish **PSQ_ST-only** A/B on v2.6 diagnostic build
-2. Reproduce PSQ skip on a **main**-based Deck build (post-`f456235` IML PSQ path)
-3. Inspect PSQ_L recompiler path vs interpreter; craft smallest upstream fix
+1. Reproduce PSQ skip on a **main**-based Deck build (post-`f456235` IML PSQ path)
+2. Inspect shared PSQ helpers (GQR scale, generic type dispatch, float pair endian) vs interpreter
+3. Craft smallest upstream fix; avoid duplicating `f456235`
