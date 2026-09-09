@@ -46,3 +46,15 @@ Isolate which PPC recompiler codegen path Bink hits (float / paired-single / loa
 - Patched `PPCRecompiler_recompileFunction` to refuse recompiling any function with `hasFPUInstruction` (FPU/PS stay on interpreter; integer stays recompiled)
 - Activision intro renders **clean** (`skipfpu-rec-activision-clean.png`)
 - Therefore the bug is in **PPC recompiler FPU/paired-single codegen**, not integer recompiler or GPU upload
+
+## PSQ-only recompiler isolation (narrower)
+- Marked `hasPSQInstruction` only on primary forms **PSQ_L (op 56)** and **PSQ_ST (op 60)** — not PSQ_LU / PSQ_STU
+- Refused recompile when `hasPSQInstruction` (those funcs fall back to interpreter; other FPU/PS still recompiled)
+- Log shows `PPCRecSkipPSQ` hits (CPU-Mode 3 / recompiler); Activision intro renders **clean**
+  - `skippsq-rec-activision-clean-t30.png` / `skippsq-rec-activision-clean.png` / `skippsq-rec-activision-clean-2.png`
+  - raw run: `psq-skip/psq-t{30,40,50}.png` + `psq-skip/cemu-log.txt`
+- Contrast: baseline recompiler Activision is heavily RGB-banded (`baseline-banded.png`)
+- **Implication:** defect is in **PSQ_L / PSQ_ST recompiler codegen** (or shared helpers those use), not general FPU arithmetic and not PSQ_*U alone (those were still recompiled and FMV stayed clean)
+
+## Next
+Inspect `PPCRecompilerImlGen_PSQ_L` / `_PSQ_ST` and x64 backend emit (GQR scale, type, PS1, endian) vs interpreter; then A/B load-only vs store-only skip.
