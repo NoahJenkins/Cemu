@@ -1,0 +1,225 @@
+[16:48:28.453] ------- Init Cemu 2.6 -------
+[16:48:28.454] Init Wii U memory space (base: 0x00007f5a00000000)
+[16:48:28.454] mlc01 path: /home/deck/CemuSwapForceTest/bisect-skippsarith/mlc01
+[16:48:28.454] CPU: AMD Custom APU 0932
+[16:48:28.454] RAM: 14805MB
+[16:48:28.454] Platform: Linux
+[16:48:28.454] Used CPU extensions: SSSE3, SSE4.1, AVX, AVX2, LZCNT, MOVBE, BMI2, AES-NI, INVARIANT-TSC
+[16:48:28.456] IOSU_CRYPTO: No otp.bin found. Online mode cannot be used
+[16:48:28.456] IOSU_CRYPTO: No Seeprom.bin found. Online mode cannot be used
+[16:48:28.730] Mounting title 0005000010139200
+[16:48:28.730] Base: /home/deck/Emulation/roms/wiiu/Skylanders - Swap Force (USA) (EnFrEsPt)/Skylanders - Swap Force (USA) (En,Fr,Es,Pt).wux [WUD]
+[16:48:28.732] Update: Not present
+[16:48:28.732] DLC: Not present
+[16:48:28.772] COS: System fonts found. Generated shareddata (26609KB)
+[16:48:28.794] Recompiler initialized
+[16:48:29.346] ------- Init Vulkan graphics backend -------
+[16:48:29.376] Vulkan instance version: 1.4
+[16:48:29.391] Using GPU: AMD Custom GPU 0932 (RADV VANGOGH)
+[16:48:29.391] Driver version: Mesa 26.0.0-devel (git-9cc9241790)
+[16:48:29.391] Vulkan: present_wait extension: supported
+[16:48:29.391] VulkanLimits: UBAlignment 4 nonCoherentAtomSize 64
+[16:48:29.396] Using available debug function: vkCreateDebugUtilsMessengerEXT()
+[16:48:29.396] Vulkan device memory info:
+[16:48:29.396] Heap 0 - Size 3072MB Flags 0x00000000
+[16:48:29.396] Heap 1 - Size 6144MB Flags 0x00000001
+[16:48:29.396] Memory 0 - HeapIndex 1 Flags 0x00000001
+[16:48:29.396] Memory 1 - HeapIndex 1 Flags 0x00000001
+[16:48:29.396] Memory 2 - HeapIndex 0 Flags 0x00000006
+[16:48:29.396] Memory 3 - HeapIndex 1 Flags 0x00000007
+[16:48:29.396] Memory 4 - HeapIndex 1 Flags 0x00000007
+[16:48:29.396] Memory 5 - HeapIndex 0 Flags 0x0000000e
+[16:48:29.396] Memory 6 - HeapIndex 0 Flags 0x0000000e
+[16:48:29.396] Memory 7 - HeapIndex 1 Flags 0x000000c1
+[16:48:29.396] Memory 8 - HeapIndex 0 Flags 0x000000c6
+[16:48:29.396] Memory 9 - HeapIndex 1 Flags 0x000000c7
+[16:48:29.396] Memory 10 - HeapIndex 0 Flags 0x000000ce
+[16:48:29.396] VK_FORMAT_D24_UNORM_S8_UINT not supported
+[16:48:29.396] VK_FORMAT_R4G4_UNORM_PACK8 not supported
+[16:48:31.074] ------- Loaded title -------
+[16:48:31.074] TitleId: 00050000-10139200
+[16:48:31.074] TitleVersion: v0
+[16:48:31.074] TitleRegion: US
+[16:48:31.074] Save path:   /home/deck/CemuSwapForceTest/bisect-skippsarith/mlc01/usr/save/00050000/10139200/user/
+[16:48:31.074] Shader cache file: shaderCache/transferable/0005000010139200.bin
+[16:48:31.074] gameprofile path:  (not present)
+[16:48:31.074] RPX hash (updated): 6cd668ab
+[16:48:31.074] RPX hash (base): 6cd668ab
+[16:48:31.087] nsyshid::BackendLibusb: device not on whitelist: 1d6b:0003
+[16:48:31.087] nsyshid::BackendLibusb: device not on whitelist: 28de:1205
+[16:48:31.087] nsyshid::BackendLibusb: device not on whitelist: 1d6b:0002
+[16:48:31.087] nsyshid::BackendLibusb: device not on whitelist: 0bda:8153
+[16:48:31.087] nsyshid::BackendLibusb: device not on whitelist: 05e3:0626
+[16:48:31.087] nsyshid::BackendLibusb: device not on whitelist: 1d6b:0003
+[16:48:31.087] nsyshid::BackendLibusb: device not on whitelist: 05e3:0610
+[16:48:31.087] nsyshid::BackendLibusb: device not on whitelist: 1d6b:0002
+[16:48:31.203] Loaded module 'nova-cafe-fin' with checksum 0xb1f102ec
+[16:48:31.203] RPL link time: 116ms
+[16:48:31.319] HLE scan time: 116ms
+[16:48:31.320] ------- Active settings -------
+[16:48:31.320] CPU-Mode: 3
+[16:48:31.320] Load shared libraries: true
+[16:48:31.320] Use precompiled shaders: 0
+[16:48:31.320] Full sync at GX2DrawDone: false
+[16:48:31.320] Strict shader mul: true
+[16:48:31.320] Async compile: true
+[16:48:31.320] Console language: 1
+[16:48:31.639] ------- Activate graphic packs -------
+[16:48:31.639] Applying patch group 'SkylandersSwapForce_V0'
+[16:48:31.639] Activate graphic pack: Skylanders Swap Force/Workarounds/Portal Stability Fix
+[16:48:31.639] ------- Init Audio backend -------
+[16:48:31.639] DirectSound: not supported
+[16:48:31.639] XAudio 2.8: not supported
+[16:48:31.639] XAudio 2.7: not supported
+[16:48:31.639] Cubeb: available
+[16:48:31.639] ------- Init Audio input backend -------
+[16:48:31.639] Cubeb: available
+[16:48:31.639] ------- Run title -------
+[16:48:31.930] PPCRecSkipPSArith func=0x0204324c size=452
+[16:48:31.930] PPCRecSkipPSArith func=0x02043270 size=416
+[16:48:31.930] PPCRecSkipPSArith func=0x0204327c size=404
+[16:48:31.930] PPCRecSkipPSArith func=0x02043288 size=392
+[16:48:31.930] PPCRecSkipPSArith func=0x02043294 size=380
+[16:48:31.930] PPCRecSkipPSArith func=0x020432a0 size=368
+[16:48:31.930] PPCRecSkipPSArith func=0x020432ac size=356
+[16:48:31.931] PPCRecSkipPSArith func=0x020432b8 size=344
+[16:48:31.931] PPCRecSkipPSArith func=0x020432c4 size=332
+[16:48:31.931] PPCRecSkipPSArith func=0x020432d0 size=320
+[16:48:31.931] PPCRecSkipPSArith func=0x020432dc size=308
+[16:48:31.931] PPCRecSkipPSArith func=0x020432e8 size=296
+[16:48:31.931] PPCRecSkipPSArith func=0x020432f4 size=284
+[16:48:31.931] PPCRecSkipPSArith func=0x02043300 size=272
+[16:48:31.931] PPCRecSkipPSArith func=0x0204330c size=260
+[16:48:31.931] PPCRecSkipPSArith func=0x02043318 size=248
+[16:48:31.931] PPCRecSkipPSArith func=0x02043324 size=236
+[16:48:31.931] PPCRecSkipPSArith func=0x02043330 size=224
+[16:48:31.931] PPCRecSkipPSArith func=0x0204333c size=212
+[16:48:31.931] PPCRecSkipPSArith func=0x02043348 size=200
+[16:48:31.931] PPCRecSkipPSArith func=0x02043354 size=188
+[16:48:31.931] PPCRecSkipPSArith func=0x02043360 size=176
+[16:48:31.931] PPCRecSkipPSArith func=0x0204336c size=164
+[16:48:31.931] PPCRecSkipPSArith func=0x0204337c size=148
+[16:48:31.931] PPCRecSkipPSArith func=0x02043388 size=136
+[16:48:31.932] PPCRecSkipPSArith func=0x0209fe80 size=264
+[16:48:31.936] PPCRecSkipPSArith func=0x023708cc size=1136
+[16:48:31.937] PPCRecSkipPSArith func=0x0312653c size=72
+[16:48:31.953] PPCRecSkipPSArith func=0x025615a4 size=21496
+[16:48:31.955] IOSU_ACT: using account default in first slot
+[16:48:31.969] PPCRecSkipPSArith func=0x025e7678 size=1808
+[16:48:31.971] PPCRecSkipPSArith func=0x026379b0 size=2824
+[16:48:31.972] PPCRecSkipPSArith func=0x0275e1d0 size=136
+[16:48:40.709] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:40.709] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:40.710] TexForceReloadR8 2048x1024 pitch=2048
+[16:48:40.710] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.710] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.710] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.711] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.711] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.711] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.719] TexForceReloadR8 2048x1024 pitch=2048
+[16:48:40.720] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:40.720] TexForceReloadR8 2048x1024 pitch=2048
+[16:48:40.721] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.721] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.721] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.721] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.721] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.721] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.730] TexForceReloadR8 2048x1024 pitch=2048
+[16:48:40.730] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:40.731] TexForceReloadR8 2048x1024 pitch=2048
+[16:48:40.731] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.731] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.732] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.732] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.732] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.732] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.755] TexForceReloadR8 2048x1024 pitch=2048
+[16:48:40.755] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:40.755] TexForceReloadR8 2048x1024 pitch=2048
+[16:48:40.756] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.756] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.756] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.756] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.756] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.756] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.787] TexForceReloadR8 2048x1024 pitch=2048
+[16:48:40.788] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:40.788] TexForceReloadR8 2048x1024 pitch=2048
+[16:48:40.788] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.789] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.789] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.789] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.789] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.789] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.821] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:40.821] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:40.821] TexForceReloadR8 2048x1024 pitch=2048
+[16:48:40.822] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.822] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.822] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.822] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.822] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.822] TexForceReloadR8 1024x512 pitch=1024
+[16:48:40.854] TexForceReloadR8 2048x1024 pitch=2048
+[16:48:40.854] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:40.855] TexForceReloadR8 2048x1024 pitch=2048
+[16:48:40.855] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.855] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.887] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:40.888] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.888] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.920] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:40.921] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.922] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.954] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:40.955] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.955] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.987] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:40.988] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:40.988] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.020] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:41.021] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.021] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.054] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:41.055] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.055] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.087] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:41.088] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.088] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.120] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:41.121] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.121] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.153] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:41.154] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.154] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.187] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:41.187] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.188] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.220] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:41.221] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.221] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.253] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:41.254] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.254] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.287] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:41.288] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.288] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.320] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:41.321] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.321] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.353] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:41.354] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.354] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.386] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:41.387] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.387] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.420] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:41.420] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.421] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:41.453] LinBegin 2048x1024 fmt=0001 tm=1 guestPitch=2048 addrPitch=2048 title=0005000010139000
+[16:48:41.454] LinBegin 1024x512 fmt=0001 tm=1 guestPitch=1024 addrPitch=1024 title=0005000010139000
+[16:48:42.552] DumpUV late path=/home/deck/.local/share/cemu-swapforce/uplane_late.pgm phys=0x1fda8b00 pitch=1024 mean=56 max=143 seen=120
+[16:48:42.585] DumpUV late path=/home/deck/.local/share/cemu-swapforce/vplane_late.pgm phys=0x20028d00 pitch=1024 mean=56 max=129 seen=121
+[16:48:44.550] DumpY late phys=0x1fb28900 pitch=2048 mean=17 var=1832 max=240 seen=120

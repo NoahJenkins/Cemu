@@ -74,7 +74,13 @@ Isolate which PPC recompiler codegen path Bink hits (float / paired-single / loa
 - Therefore SWAP Force Bink uses **GQR float (type 0) PSQ**, not only U8/U16/S8/S16 quantized forms
 - Narrows the bug hunt to float pair load/store endian, PS0/PS1 packing, and main's `LD/ST_MODE_SINGLE` used for `TYPE_F32`
 
+## PS arithmetic skip also cleans (same funcs as PSQ_ST)
+- Skipping recompile for common **PS_*** arithmetic/merge ops (not marking PSQ) still cleans Activision (`skippsarith-rec-activision-clean.png`)
+- Skipped address set matches **PSQ_ST-only** skip (`0x0204324c` cluster) → those hot funcs contain both PSQ stores and PS arithmetic
+- Therefore whole-function skips cannot yet separate “PSQ memory op bug” vs “other paired-single op bug”
+- Next isolation needs instruction-granularity (interpreter trampoline for one opcode class inside an otherwise recompiled function)
+
 ## Next
-1. Finish **main** PSQ-skip Deck build (vcpkg in progress) and confirm isolation post-`f456235`
-2. Diff v2.6 float PSQ_FLOAT_* vs interpreter float PSQ; on main, `EmitPSQ* TYPE_F32` → SINGLE
+1. Finish **main** PSQ-skip Deck build (now compiling) and confirm isolation post-`f456235`
+2. Instruction-level PSQ vs PS-arith split; float `TYPE_F32` / `PSQ_FLOAT_*` vs interpreter
 3. Craft smallest upstream fix; avoid duplicating `f456235`
