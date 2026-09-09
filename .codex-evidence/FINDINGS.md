@@ -22,23 +22,22 @@
 - Y dump at pitch 2048 shows recognizable Activision with horizontal striping (not a pitch-misread)
 - Alternate pitch reinterpret (1280/1920/etc.) does not yield a clean logo
 
-## CPU mode A/B
-- `--force-interpreter`: too slow; never reached FMV in test window
-- `cpuMode = 1` (Singlecore-Recompiler) via game profile: **still banded**
-- Not a multicore race
+## CPU mode A/B (decisive)
+- Multicore recompiler: banded
+- Singlecore recompiler (`cpuMode = 1`): **still banded** → not a multicore race
+- `--force-interpreter` on stock Cemu 2.6: Activision logo **clean** (no RGB banding), reproduced twice
 
 ## Implication
-Corruption is produced by in-title Bink under PPC (even singlecore recompiler), already present in guest R8 planes before GPU upload.
+Corruption is produced by in-title Bink under the **PPC recompiler** (even singlecore). Interpreter is correct. Guest R8 Y/U/V planes are already wrong before GPU upload when using the recompiler.
 
 ## Evidence files
-- `baseline-banded.png` — Activision intro on Cemu 2.6 (Vulkan)
+- `baseline-banded.png` — Activision intro on Cemu 2.6 recompiler (Vulkan)
 - `display-still-banded.png` — still banded after R8 force-reload experiment
 - `binktrace-display-t30.png` — display during Bink-trace run
 - `singlecore-still-banded.png` — still banded under singlecore recompiler
-- `yplane-guest-autocontrast.png` / `yplane-late-guest.png` — guest Y plane dumps
+- `interpreter-activision-clean.png` / `interpreter-activision-clean-2.png` — clean under `--force-interpreter`
+- `yplane-guest-autocontrast.png` / `yplane-late-guest.png` — guest Y plane dumps (recompiler)
 - `uplane-late-guest.png` — guest U plane dump (autocontrasted)
 
-## Interpreter A/B (decisive)
-- `--force-interpreter` on stock Cemu 2.6: Activision logo renders **clean** (no RGB banding)
-- Reproduced on two launches (`interpreter-activision-clean.png`, `interpreter-activision-clean-2.png`)
-- Singlecore recompiler still banded → not a multicore race; points at **PPC recompiler codegen** used by in-game Bink
+## Next
+Isolate which PPC recompiler codegen path Bink hits (float / paired-single / load-store / cache ops).
