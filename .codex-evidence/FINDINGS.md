@@ -41,3 +41,8 @@ Corruption is produced by in-title Bink under the **PPC recompiler** (even singl
 
 ## Next
 Isolate which PPC recompiler codegen path Bink hits (float / paired-single / load-store / cache ops).
+
+## FPU recompiler isolation
+- Patched `PPCRecompiler_recompileFunction` to refuse recompiling any function with `hasFPUInstruction` (FPU/PS stay on interpreter; integer stays recompiled)
+- Activision intro renders **clean** (`skipfpu-rec-activision-clean.png`)
+- Therefore the bug is in **PPC recompiler FPU/paired-single codegen**, not integer recompiler or GPU upload
