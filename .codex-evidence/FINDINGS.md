@@ -62,7 +62,12 @@ Isolate which PPC recompiler codegen path Bink hits (float / paired-single / loa
 - PR #1894 AppImage also still banded (`pr1894-intro-t30.png`) — H.264 path irrelevant here
 - Diagnostic tree on Deck is still v2.6 (pre-rework PSQ_GENERIC backend); skip result there proves class, not the final main-line patch site
 
+## PSQ_L-only vs PSQ_ST-only (v2.6 diagnostic)
+- **PSQ_L-only skip** (stores still recompiled): Activision at t30/t40 **clean** (`skippsql-rec-activision-clean.png`, `psql-skip/psql-t{30,40}.png`); log `PPCRecSkipPSQL`
+- t50 in same run looked banded again (`skippsql-rec-activision-t50-banded.png`) — treat as unresolved anomaly / possible second pass; do not over-claim from one late frame
+- **PSQ_ST-only skip**: in progress
+
 ## Next
-1. A/B **PSQ_L-only** vs **PSQ_ST-only** skip on v2.6 diagnostic build
+1. Finish **PSQ_ST-only** A/B on v2.6 diagnostic build
 2. Reproduce PSQ skip on a **main**-based Deck build (post-`f456235` IML PSQ path)
-3. Diff recompiler PSQ vs interpreter (`quantize`/`dequantize`, GQR scale, endian, PS1) and craft smallest upstream fix
+3. Inspect PSQ_L recompiler path vs interpreter; craft smallest upstream fix
