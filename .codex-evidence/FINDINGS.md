@@ -68,7 +68,13 @@ Isolate which PPC recompiler codegen path Bink hits (float / paired-single / loa
 - Important: skip is **whole-function** — a function with both L and ST is fully interpreted if either op is marked. The two skip sets differ, yet each cleans t30/t40 → either multiple broken sites, or critical funcs appear in both sets via mixed ops
 - t50 was banded again under L-only and ST-only (`*-t50-banded.png`) but was clean under combined PSQ skip — timing/second-pass anomaly; needs a tighter capture before concluding
 
+## Float PSQ path is on the hot path
+- Diagnostic: zeroed/poisoned recompiler **float** PSQ load/store (types `PSQ_FLOAT_*`) while leaving integer PSQ intact
+- Activision FMV becomes a solid green fog / no logo (`poisonfloat-psq-destroys-fmv.png`, `poisonfloat/poisonfloat-t{30,40,50}.png`)
+- Therefore SWAP Force Bink uses **GQR float (type 0) PSQ**, not only U8/U16/S8/S16 quantized forms
+- Narrows the bug hunt to float pair load/store endian, PS0/PS1 packing, and main's `LD/ST_MODE_SINGLE` used for `TYPE_F32`
+
 ## Next
-1. Reproduce PSQ skip on a **main**-based Deck build (post-`f456235` IML PSQ path)
-2. Inspect shared PSQ helpers (GQR scale, generic type dispatch, float pair endian) vs interpreter
+1. Finish **main** PSQ-skip Deck build (vcpkg in progress) and confirm isolation post-`f456235`
+2. Diff v2.6 float PSQ_FLOAT_* vs interpreter float PSQ; on main, `EmitPSQ* TYPE_F32` → SINGLE
 3. Craft smallest upstream fix; avoid duplicating `f456235`
