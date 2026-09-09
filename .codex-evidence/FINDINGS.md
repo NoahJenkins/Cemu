@@ -56,5 +56,13 @@ Isolate which PPC recompiler codegen path Bink hits (float / paired-single / loa
 - Contrast: baseline recompiler Activision is heavily RGB-banded (`baseline-banded.png`)
 - **Implication:** defect is in **PSQ_L / PSQ_ST recompiler codegen** (or shared helpers those use), not general FPU arithmetic and not PSQ_*U alone (those were still recompiled and FMV stayed clean)
 
+## Main still affected (post scaler fix)
+- Upstream `f456235` ("CPU: Fix PSQ_L/PSQ_ST scaler calculation") is in `main` / `5ead580` but **does not** clear SWAP Force Activision banding
+- `main-5ead580` AppImage Activision frames match baseline banding metrics (`main-5ead580/main-intro-t35.png`, `main-intro-t40.png`)
+- PR #1894 AppImage also still banded (`pr1894-intro-t30.png`) — H.264 path irrelevant here
+- Diagnostic tree on Deck is still v2.6 (pre-rework PSQ_GENERIC backend); skip result there proves class, not the final main-line patch site
+
 ## Next
-Inspect `PPCRecompilerImlGen_PSQ_L` / `_PSQ_ST` and x64 backend emit (GQR scale, type, PS1, endian) vs interpreter; then A/B load-only vs store-only skip.
+1. A/B **PSQ_L-only** vs **PSQ_ST-only** skip on v2.6 diagnostic build
+2. Reproduce PSQ skip on a **main**-based Deck build (post-`f456235` IML PSQ path)
+3. Diff recompiler PSQ vs interpreter (`quantize`/`dequantize`, GQR scale, endian, PS1) and craft smallest upstream fix
