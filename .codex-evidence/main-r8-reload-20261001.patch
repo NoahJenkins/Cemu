@@ -1,0 +1,32 @@
+diff --git a/src/Cafe/HW/Latte/Core/LatteTextureCache.cpp b/src/Cafe/HW/Latte/Core/LatteTextureCache.cpp
+index 3145e90..76fe3a3 100644
+--- a/src/Cafe/HW/Latte/Core/LatteTextureCache.cpp
++++ b/src/Cafe/HW/Latte/Core/LatteTextureCache.cpp
+@@ -200,6 +200,14 @@ uint64 _botwLargeTexHax = 0;
+ 
+ bool LatteTC_HasTextureChanged(LatteTexture* hostTexture, bool force)
+ {
++	// Diagnostic: bypass cached movie planes to test stale texture data.
++	if (hostTexture->format == Latte::E_GX2SURFFMT::R8_UNORM && hostTexture->width >= 1024)
++	{
++		static uint32 probeCount = 0;
++		if (probeCount++ < 6)
++			cemuLog_log(LogType::Force, "SFTextureReload addr={:08x} size={}x{}", hostTexture->physAddress, hostTexture->width, hostTexture->height);
++		return true;
++	}
+ 	if (hostTexture->forceInvalidate)
+ 	{
+ 		force = true;
+diff --git a/src/Common/CMakeLists.txt b/src/Common/CMakeLists.txt
+index cb80eb6..ab9c545 100644
+--- a/src/Common/CMakeLists.txt
++++ b/src/Common/CMakeLists.txt
+@@ -46,7 +46,7 @@ PRIVATE
+ )
+ endif()
+ 
+-if(LINUX)
++if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+ 	target_sources(CemuCommon PRIVATE
+ 		ExceptionHandler/ELFSymbolTable.cpp
+ 		ExceptionHandler/ELFSymbolTable.h

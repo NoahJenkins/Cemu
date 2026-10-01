@@ -1,86 +1,61 @@
-# SWAP Force Activision FMV findings (in progress)
+# SWAP Force movie corruption investigation
 
-## Not H.264
-- No H264DEC* calls during Activision intro
-- No cafeLibs/h264.rpl
-- Disc has Bink/VP6 markers (BIKb, vp6F, On2)
+## Verified status — 2026-10-01
 
-## Presentation path
-- Three linear R8 planes: 2048x1024 (Y) + 1024x512 (U) + 1024x512 (V)
-- guestPitch == addrPitch (2048 / 1024)
-- No GX2CopySurface / DMAE large copies during FMV → CPU stores from in-game Bink
-- PR #2051, pitch hacks, force-reload R8: still banded
+A per-game single-core recompiler workaround is verified and installed on the Deck. The underlying multicore defect is not fixed. The reproducible failure is a **moving part of the Vicarious Visions startup movie**, where red/green copies of the scene separate from the visible objects. Held Activision and Vicarious Visions logos can look clean in a failing run.
 
-## Guest memory already corrupt
-- Dumped Y/U/V from phys RAM before GPU upload
-- Y shows Activision logo shape with horizontal banding (same class of artifact as display)
-- Pitch reinterpret tests: only pitch=2048 yields recognizable logo → stride metadata OK; decode content wrong
+| Run | Result in moving scene | Saved frame |
+| --- | --- | --- |
+| Installed Cemu 2.6, recompiler | Color ghosts and horizontal breaks | `retest-20261001/installed-2.6-corrupt.png` (20 seconds) |
+| Main `8cf3997`, recompiler | Same failure | `retest-20261001/main-corrupt.png` (25 seconds) |
+| Main, whole-function PSQ fallback | Same failure; fallback log confirmed | `retest-20261001/main-psq-skip-corrupt.png` (25 seconds) |
+| Main, direct-float-copy optimizer disabled | Same failure | `retest-20261001/main-no-floatcopy-corrupt.png` (25 seconds) |
+| Main, `--force-interpreter` | Inspected moving frames are clean | `retest-20261001/main-interpreter-clean.png` (92 seconds) |
+| Main, all-FPU whole-function fallback | Color ghosts absent in sampled moving frames; top horizontal breaks remain | `retest-20261001/main-fpu-skip.png` (28.5 seconds) |
+| Main, single-core recompiler | Color ghosts absent in sampled moving frames | `retest-20261001/main-singlecore.png` (29 seconds) |
+| Main, multicore with GX2DrawDone full sync enabled | Color ghosts remain | `retest-20261001/main-fullsync-corrupt.png` (28 seconds) |
+| Main, forced refresh of large R8 movie textures | Color ghosts remain; upload probe log confirmed | `retest-20261001/main-r8-reload-corrupt.png` (27 seconds) |
+| Main, multicore interpreter | Sampled moving frames are clean | `retest-20261001/main-multicore-interpreter.png` (67 seconds) |
+| Installed Cemu 2.6, single-core recompiler | Moving startup scene is clean | `retest-20261001/installed-2.6-singlecore.png` (20.5 seconds) |
+| Installed Cemu 2.6, copied save and single-core recompiler | Story sequence reaches the portal prompt; sampled moving frames are clean | `retest-20261001/singlecore-story.mp4` |
+| Installed Cemu 2.6, final profile copied from live config | Log confirms `CPU-Mode: 1 (gameprofile)`; sampled moving scene has no prominent color ghosts | `retest-20261001/final-profile-moving.png` (18.5 seconds) |
 
-## Bink write path
-- No SFCopyLog / SFDMAELog during Activision → pure CPU stores from in-game Bink
-- Late dumps: Y phys=0x1fe28c00, U=0x200a8e00, V=0x1fd28a00
-- Y dump at pitch 2048 shows recognizable Activision with horizontal striping (not a pitch-misread)
-- Alternate pitch reinterpret (1280/1920/etc.) does not yield a clean logo
+These are different capture times in the same animation, not pixel-identical game frames. Interpreter mode and FPU fallback also change timing. Single-core recompiler removes the color ghosts without changing generated instruction semantics, so the current evidence points toward timing or concurrency. It does not isolate a floating point instruction bug. `GX2DrawDone` already forces full sync for Vulkan in the source, which explains why its config switch did not help.
 
-## CPU mode A/B (decisive)
-- Multicore recompiler: banded
-- Singlecore recompiler (`cpuMode = 1`): **still banded** → not a multicore race
-- `--force-interpreter` on stock Cemu 2.6: Activision logo **clean** (no RGB banding), reproduced twice
+Recordings are in `/home/deck/CemuSwapForceTest/<variant>/evidence/intro.mp4` on the Deck. Variants are `installed-2.6-video-20261001`, `main-baseline-video-20261001`, `main-skip-video-20261001`, `main-no-floatcopy-20261001`, and `main-interpreter-video-20261001`. Recompiler recordings are 42 seconds at 12 FPS. The interpreter recording is 139.5 seconds at 4 FPS. `record-deck-intro.sh` records the actual Xwayland Cemu window using isolated settings and MLC copies.
 
-## Implication
-Corruption is produced by in-title Bink under the **PPC recompiler** (even singlecore). Interpreter is correct. Guest R8 Y/U/V planes are already wrong before GPU upload when using the recompiler.
+The visible symptom resembles the movie attached to [Cemu issue #1147](https://github.com/cemu-project/Cemu/issues/1147). That issue also reports icon corruption. The copied-save test still showed invisible save-slot icons.
 
-## Evidence files
-- `baseline-banded.png` — Activision intro on Cemu 2.6 recompiler (Vulkan)
-- `display-still-banded.png` — still banded after R8 force-reload experiment
-- `binktrace-display-t30.png` — display during Bink-trace run
-- `singlecore-still-banded.png` — still banded under singlecore recompiler
-- `interpreter-activision-clean.png` / `interpreter-activision-clean-2.png` — clean under `--force-interpreter`
-- `yplane-guest-autocontrast.png` / `yplane-late-guest.png` — guest Y plane dumps (recompiler)
-- `uplane-late-guest.png` — guest U plane dump (autocontrasted)
+## Correction to the earlier evidence
 
-## Next
-Isolate which PPC recompiler codegen path Bink hits (float / paired-single / load-store / cache ops).
+The earlier filenames and conclusions below are not reliable proof of the fault location. `baseline-banded.png`, `display-still-banded.png`, and `singlecore-still-banded.png` show the title screen. `interpreter-activision-clean.png` shows a loading screen. `poisonfloat-psq-destroys-fmv.png` shows the desktop. The PSQ fallback does **not** fix the newly captured moving scene on main.
 
-## FPU recompiler isolation
-- Patched `PPCRecompiler_recompileFunction` to refuse recompiling any function with `hasFPUInstruction` (FPU/PS stay on interpreter; integer stays recompiled)
-- Activision intro renders **clean** (`skipfpu-rec-activision-clean.png`)
-- Therefore the bug is in **PPC recompiler FPU/paired-single codegen**, not integer recompiler or GPU upload
+The old notes remain in Git history at `aba43cc`. Recheck their claims with matching moving scenes before using them. In particular, the prior claims that PSQ or FPU code generation was isolated are superseded. The old single-core conclusion is also contradicted by the fresh recordings.
 
-## PSQ-only recompiler isolation (narrower)
-- Marked `hasPSQInstruction` only on primary forms **PSQ_L (op 56)** and **PSQ_ST (op 60)** — not PSQ_LU / PSQ_STU
-- Refused recompile when `hasPSQInstruction` (those funcs fall back to interpreter; other FPU/PS still recompiled)
-- Log shows `PPCRecSkipPSQ` hits (CPU-Mode 3 / recompiler); Activision intro renders **clean**
-  - `skippsq-rec-activision-clean-t30.png` / `skippsq-rec-activision-clean.png` / `skippsq-rec-activision-clean-2.png`
-  - raw run: `psq-skip/psq-t{30,40,50}.png` + `psq-skip/cemu-log.txt`
-- Contrast: baseline recompiler Activision is heavily RGB-banded (`baseline-banded.png`)
-- **Implication:** defect is in **PSQ_L / PSQ_ST recompiler codegen** (or shared helpers those use), not general FPU arithmetic and not PSQ_*U alone (those were still recompiled and FMV stayed clean)
+## Delivered workaround
 
-## Main still affected (post scaler fix)
-- Upstream `f456235` ("CPU: Fix PSQ_L/PSQ_ST scaler calculation") is in `main` / `5ead580` but **does not** clear SWAP Force Activision banding
-- `main-5ead580` AppImage Activision frames match baseline banding metrics (`main-5ead580/main-intro-t35.png`, `main-intro-t40.png`)
-- PR #1894 AppImage also still banded (`pr1894-intro-t30.png`) — H.264 path irrelevant here
-- Diagnostic tree on Deck is still v2.6 (pre-rework PSQ_GENERIC backend); skip result there proves class, not the final main-line patch site
+- Repository profile: `bin/gameProfiles/default/0005000010139200.ini`.
+- Installed profile: `/home/deck/.config/Cemu/gameProfiles/0005000010139200.ini`.
+- Setting: `[CPU]` with `cpuMode = 1` (single-core recompiler), scoped to the tested USA title `00050000-10139200`.
+- The installed Cemu 2.6 ignored the text `Singlecore-Recompiler` in the first final check. The numeric form was then loaded successfully. Use the numeric form for this installation.
+- No profile existed at the live path before this change. Rollback is removal of this one new file.
+- The test and live profile hashes matched after installation. Test launches used isolated MLC paths. The gameplay test used a copy of the user's save and a keyboard controller only inside the isolated test config.
+- Final verification: local and live profile SHA-256 is `db8f88edb400fb93ac73753cd36c83bd3f8af9b5f4b1989e6dcc211b665c7bc0`. The Deck source diff exactly matches its saved original patch. No Cemu or capture process remained running. Shell syntax checks and `git diff --check` passed.
 
-## PSQ_L-only vs PSQ_ST-only (v2.6 diagnostic)
-- **PSQ_L-only skip**: Activision t30/t40 **clean** (`skippsql-rec-activision-clean.png`); log `PPCRecSkipPSQL` (skipped larger funcs e.g. `0x029bd464`)
-- **PSQ_ST-only skip**: Activision t30/t40 also **clean** (`skippsqst-rec-activision-clean.png`); log `PPCRecSkipPSQST` (skipped small funcs e.g. `0x0204324c` — same cluster as combined PSQ skip)
-- Important: skip is **whole-function** — a function with both L and ST is fully interpreted if either op is marked. The two skip sets differ, yet each cleans t30/t40 → either multiple broken sites, or critical funcs appear in both sets via mixed ops
-- t50 was banded again under L-only and ST-only (`*-t50-banded.png`) but was clean under combined PSQ skip — timing/second-pass anomaly; needs a tighter capture before concluding
+## Verification and limits
 
-## Float PSQ path is on the hot path
-- Diagnostic: zeroed/poisoned recompiler **float** PSQ load/store (types `PSQ_FLOAT_*`) while leaving integer PSQ intact
-- Activision FMV becomes a solid green fog / no logo (`poisonfloat-psq-destroys-fmv.png`, `poisonfloat/poisonfloat-t{30,40,50}.png`)
-- Therefore SWAP Force Bink uses **GQR float (type 0) PSQ**, not only U8/U16/S8/S16 quantized forms
-- Narrows the bug hunt to float pair load/store endian, PS0/PS1 packing, and main's `LD/ST_MODE_SINGLE` used for `TYPE_F32`
+`retest-20261001/multicore-before.mp4` and `singlecore-after.mp4` show the moving startup scene on the same installed Cemu 2.6 binary. `singlecore-story.mp4` shows part of the subsequent story sequence.
 
-## PS arithmetic skip also cleans (same funcs as PSQ_ST)
-- Skipping recompile for common **PS_*** arithmetic/merge ops (not marking PSQ) still cleans Activision (`skippsarith-rec-activision-clean.png`)
-- Skipped address set matches **PSQ_ST-only** skip (`0x0204324c` cluster) → those hot funcs contain both PSQ stores and PS arithmetic
-- Therefore whole-function skips cannot yet separate “PSQ memory op bug” vs “other paired-single op bug”
-- Next isolation needs instruction-granularity (interpreter trampoline for one opcode class inside an otherwise recompiled function)
+The story test reached the prompt to place a Skylander on the portal. Ten sampled window-title rates over about 20 seconds were 27.44–30.36 FPS, with most near 30.05 FPS. These samples cover the end of the story sequence and the portal prompt; they are not a gameplay benchmark. Gameplay beyond the portal prompt was not verified because no Skylander was loaded.
 
-## Next
-1. Finish **main** PSQ-skip Deck build (now compiling) and confirm isolation post-`f456235`
-2. Instruction-level PSQ vs PS-arith split; float `TYPE_F32` / `PSQ_FLOAT_*` vs interpreter
-3. Craft smallest upstream fix; avoid duplicating `f456235`
+The save-slot icons remain invisible. Small horizontal breaks can appear near the top in the captured startup frames, including interpreter and FPU fallback runs. The workaround is verified for the prominent color ghosts; it is not a claim that all visual defects are fixed.
+
+The source builds used main commit `8cf3997`, not the latest upstream commit. Diagnostic builds completed after a local CMake 3.22 compatibility adjustment (`CMAKE_SYSTEM_NAME` instead of `LINUX`). That build adjustment and the diagnostic changes were removed from the Deck source tree after testing, restoring its original three-file PSQ diagnostic patch. Test binaries and recordings were retained. The installed Cemu executable was not replaced.
+
+## Remaining source investigation
+
+Single-core recompilation and both interpreter modes remove the color ghosts in the sampled scene. Whole-function PSQ fallback, disabling direct float copies, full GPU sync, and forced R8 reload do not. All-FPU fallback also removes the ghosts but changes timing. These observations do not justify a PSQ code-generation patch.
+
+The next source investigation should trace when the guest finishes each movie plane relative to draw submission under multicore execution. A fresh matched reference is required before treating any guest-memory dump as corrupt. There is also a suspicious hash/decode ordering in `LatteTextureLoader_UpdateTextureSliceData`, but the failed forced-reload probe gives no basis to claim that changing it fixes this issue.
+
+For future visual tests, record the full moving sequence and identify the frame by its contents. A fixed delay or a clean held logo is insufficient evidence.

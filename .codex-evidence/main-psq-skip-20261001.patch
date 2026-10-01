@@ -1,0 +1,63 @@
+diff --git a/src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.cpp b/src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.cpp
+index fae5127..08bef99 100644
+--- a/src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.cpp
++++ b/src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.cpp
+@@ -208,6 +208,14 @@ PPCRecFunction_t* PPCRecompiler_recompileFunction(PPCFunctionBoundaryTracker::PP
+ 	ppcImlGenContext_t ppcImlGenContext = { 0 };
+ 	ppcImlGenContext.debug_entryPPCAddress = range.startAddress;
+ 	bool compiledSuccessfully = PPCRecompiler_generateIntermediateCode(ppcImlGenContext, ppcRecFunc, entryAddresses, boundaryTracker);
++	// TEMP diagnose: skip PSQ_L/ST functions (interpreter fallback)
++	if (compiledSuccessfully && ppcImlGenContext.hasPSQInstruction)
++	{
++		static uint32 s_skipPsq;
++		if (s_skipPsq++ < 32)
++			cemuLog_log(LogType::Force, "PPCRecSkipPSQ func=0x{:08x} size={}", range.startAddress, range.length);
++		compiledSuccessfully = false;
++	}
+ 	if (compiledSuccessfully == false)
+ 	{
+ 		delete ppcRecFunc;
+diff --git a/src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.h b/src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.h
+index fc86407..c90d975 100644
+--- a/src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.h
++++ b/src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.h
+@@ -64,6 +64,7 @@ struct ppcImlGenContext_t
+ 	std::vector<IMLSegment*> segmentList2;
+ 	// code generation control
+ 	bool hasFPUInstruction; // if true, PPCEnter macro will create FP_UNAVAIL checks -> Not needed in user mode
++	bool hasPSQInstruction; // TEMP: PSQ_L/ST present
+ 	// analysis info
+ 	struct  
+ 	{
+diff --git a/src/Cafe/HW/Espresso/Recompiler/PPCRecompilerImlGen.cpp b/src/Cafe/HW/Espresso/Recompiler/PPCRecompilerImlGen.cpp
+index 89e805d..3f5dd9f 100644
+--- a/src/Cafe/HW/Espresso/Recompiler/PPCRecompilerImlGen.cpp
++++ b/src/Cafe/HW/Espresso/Recompiler/PPCRecompilerImlGen.cpp
+@@ -2637,11 +2637,13 @@ bool PPCRecompiler_decodePPCInstruction(ppcImlGenContext_t* ppcImlGenContext)
+ 		if (PPCRecompilerImlGen_PSQ_L(ppcImlGenContext, opcode, false) == false)
+ 			unsupportedInstructionFound = true;
+ 		ppcImlGenContext->hasFPUInstruction = true;
++		ppcImlGenContext->hasPSQInstruction = true;
+ 		break;
+ 	case 57:
+ 		if (PPCRecompilerImlGen_PSQ_L(ppcImlGenContext, opcode, true) == false)
+ 			unsupportedInstructionFound = true;
+ 		ppcImlGenContext->hasFPUInstruction = true;
++		ppcImlGenContext->hasPSQInstruction = true;
+ 		break;
+ 	case 59: // opcode category
+ 		switch (PPC_getBits(opcode, 30, 5))
+@@ -2695,11 +2697,13 @@ bool PPCRecompiler_decodePPCInstruction(ppcImlGenContext_t* ppcImlGenContext)
+ 		if (PPCRecompilerImlGen_PSQ_ST(ppcImlGenContext, opcode, false) == false)
+ 			unsupportedInstructionFound = true;
+ 		ppcImlGenContext->hasFPUInstruction = true;
++		ppcImlGenContext->hasPSQInstruction = true;
+ 		break;
+ 	case 61:
+ 		if (PPCRecompilerImlGen_PSQ_ST(ppcImlGenContext, opcode, true) == false)
+ 			unsupportedInstructionFound = true;
+ 		ppcImlGenContext->hasFPUInstruction = true;
++		ppcImlGenContext->hasPSQInstruction = true;
+ 		break;
+ 	case 63: // opcode category
+ 		switch (PPC_getBits(opcode, 30, 5))
