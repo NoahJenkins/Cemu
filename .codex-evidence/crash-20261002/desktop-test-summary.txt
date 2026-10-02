@@ -1,0 +1,5 @@
+[12:31:44.820] ------- Init Cemu 2.6 -------
+[12:31:46.303] Driver version: Mesa 26.2.0-devel (git-035ae2f854)
+[12:31:47.508] Save path:   /home/deck/CemuSwapForceTest/desktop-portal-20261002/mlc01/usr/save/00050000/10139200/user/
+[12:31:47.748] CPU-Mode: 1 (gameprofile)
+[12:31:48.108] Activate graphic pack: Skylanders Swap Force/Workarounds/Portal Stability Fix

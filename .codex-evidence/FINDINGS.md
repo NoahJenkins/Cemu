@@ -1,5 +1,11 @@
 # SWAP Force movie corruption investigation
 
+## Gameplay and crash follow-up — 2026-10-02
+
+After the controlled tests, the user reported completing the first level without any issues using the installed workaround. This is user-reported full-level validation; the automated tests below cover only early gameplay. It does not establish that the multicore or display-session defects are fixed.
+
+The user reported a gaming-session restart after selecting Dark Stealth Elf in the Load dialog. The journal confirms an Xwayland segmentation fault followed by Gamescope aborting; the OS did not reboot. Cemu had loaded the single-core profile. Subsequent isolated Desktop Mode and Game Mode tests both passed figure loading, early gameplay, and removal/reload with copied data. The original crash was not reproduced and its trigger remains unresolved. See `crash-20261002/README.md` for evidence, test limits, and final device state.
+
 ## Verified status — 2026-10-01
 
 A per-game single-core recompiler workaround is verified and installed on the Deck. The underlying multicore defect is not fixed. The reproducible failure is a **moving part of the Vicarious Visions startup movie**, where red/green copies of the scene separate from the visible objects. Held Activision and Vicarious Visions logos can look clean in a failing run.

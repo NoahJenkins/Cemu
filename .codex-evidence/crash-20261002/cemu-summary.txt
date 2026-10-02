@@ -1,0 +1,5 @@
+[12:20:17.449] ------- Init Cemu 2.6 -------
+[12:20:18.565] Driver version: Mesa 26.2.0-devel (git-035ae2f854)
+[12:20:20.252] TitleId: 00050000-10139200
+[12:20:20.484] CPU-Mode: 1 (gameprofile)
+[12:20:20.815] Activate graphic pack: Skylanders Swap Force/Workarounds/Portal Stability Fix

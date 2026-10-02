@@ -1,0 +1,31 @@
+2026-10-02T12:23:45-05:00 steamdeck gamescope-session[1802]: [xwayland ei] Unhandled event EI_EVENT_SYNC (91)
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE)
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) Backtrace:
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 0: Xwayland (0x55d3e1a1a000+0x1828bf) [0x55d3e1b9c8bf]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 1: Xwayland (0x55d3e1a1a000+0x1829c5) [0x55d3e1b9c9c5]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 2: /usr/lib/libc.so.6 (0x7f0bda751000+0x3def0) [0x7f0bda78eef0]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 3: Xwayland (0x55d3e1a1a000+0xf9d9b) [0x55d3e1b13d9b]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 4: Xwayland (0x55d3e1a1a000+0xfbcf3) [0x55d3e1b15cf3]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 5: Xwayland (0x55d3e1a1a000+0xdb16e) [0x55d3e1af516e]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 6: Xwayland (0x55d3e1a1a000+0xe06d3) [0x55d3e1afa6d3]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 7: Xwayland (0x55d3e1a1a000+0xe163f) [0x55d3e1afb63f]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 8: Xwayland (0x55d3e1a1a000+0xda19a) [0x55d3e1af419a]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 9: Xwayland (0x55d3e1a1a000+0xdda0b) [0x55d3e1af7a0b]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 10: Xwayland (0x55d3e1a1a000+0x9d261) [0x55d3e1ab7261]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 11: Xwayland (0x55d3e1a1a000+0xa6314) [0x55d3e1ac0314]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 12: Xwayland (0x55d3e1a1a000+0x1d625) [0x55d3e1a37625]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 13: /usr/lib/libc.so.6 (0x7f0bda751000+0x276b5) [0x7f0bda7786b5]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 14: /usr/lib/libc.so.6 (__libc_start_main+0x89) [0x7f0bda778769]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) 15: Xwayland (0x55d3e1a1a000+0x1f065) [0x55d3e1a39065]
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE)
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) Segmentation fault at address 0x25200000056
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE)
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: Fatal server error:
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE) Caught signal 11 (Segmentation fault). Server aborting
+2026-10-02T12:23:55-05:00 steamdeck gamescope-session[1802]: (EE)
+2026-10-02T12:23:56-05:00 steamdeck gamescope-session[1672]: [gamescope] [Info]  wlserver: [xwayland/server.c:217] Restarting Xwayland
+2026-10-02T12:23:56-05:00 steamdeck gamescope-session[1672]:  EIS: 12:23:56 | WARN | Client error: socket disconnected
+2026-10-02T12:23:56-05:00 steamdeck gamescope-session[1672]: [gamescope] [Error] xwm: X11 I/O error! This is fatal. Aborting...
+xorg-xwayland 24.1.10-1.2
+gamescope 3.16.23.6-1
+2026-09-28 21:57:43
