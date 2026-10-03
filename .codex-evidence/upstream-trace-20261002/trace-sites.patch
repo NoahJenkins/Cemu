@@ -1,0 +1,108 @@
+diff --git a/src/Cafe/HW/Latte/Core/LatteTextureLegacy.cpp b/src/Cafe/HW/Latte/Core/LatteTextureLegacy.cpp
+index 7b8a0b7..971475e 100644
+--- a/src/Cafe/HW/Latte/Core/LatteTextureLegacy.cpp
++++ b/src/Cafe/HW/Latte/Core/LatteTextureLegacy.cpp
+@@ -3,6 +3,7 @@
+ #include "Cafe/HW/Latte/Core/LatteShader.h"
+ 
+ #include "Cafe/HW/Latte/Renderer/Renderer.h"
++#include "SwapForceVideoTrace.h"
+ 
+ #ifdef ENABLE_OPENGL
+ #include "Cafe/HW/Latte/Renderer/OpenGL/OpenGLRenderer.h"
+@@ -265,6 +266,14 @@ void LatteTexture_updateTexturesForStage(LatteDecompilerShader* shaderContext, u
+ 			baseTexture->reloadFromDynamicTextures = false;
+ 		}
+ 		LatteTC_MarkTextureStillInUse(baseTexture);
++		auto& sfTrace = SwapForceVideoTrace::Get();
++		if (sfTrace.Match(baseTexture->width, baseTexture->height, baseTexture->format, static_cast<uint32>(baseTexture->tileMode)))
++		{
++			auto e = sfTrace.Begin("draw", baseTexture->physAddress, baseTexture->width, baseTexture->height, baseTexture->pitch,
++				reinterpret_cast<uintptr_t>(baseTexture), baseTexture->reloadCount);
++			e.unit = textureIndex; e.stage = static_cast<uint32>(shaderContext->shaderType);
++			sfTrace.Submit(std::move(e));
++		}
+ 
+ 		// check if barrier is necessary
+ 		if ((sint32)(LatteGPUState.drawCallCounter - baseTexture->lastUnflushedRTDrawcallIndex) < 2)
+diff --git a/src/Cafe/HW/Latte/Core/LatteTextureLoader.cpp b/src/Cafe/HW/Latte/Core/LatteTextureLoader.cpp
+index 03722eb..98c9896 100644
+--- a/src/Cafe/HW/Latte/Core/LatteTextureLoader.cpp
++++ b/src/Cafe/HW/Latte/Core/LatteTextureLoader.cpp
+@@ -2,6 +2,7 @@
+ #include "Cafe/HW/Latte/LatteAddrLib/LatteAddrLib.h"
+ #include "config/ActiveSettings.h"
+ #include "Cafe/CafeSystem.h"
++#include "SwapForceVideoTrace.h"
+ 
+ //#define BENCHMARK_TEXTURE_DECODING		// if defined, time it takes to decode textures will be measured and logged to log.txt
+ 
+@@ -634,6 +635,18 @@ void LatteTextureLoader_UpdateTextureSliceData(LatteTexture* tex, uint32 sliceIn
+ 	uint32 imageSize = texDecoder->calculateImageSize(&textureLoader);
+ 
+ 	uint8* pixelData = (uint8*)g_renderer->texture_acquireTextureUploadBuffer(imageSize);
++	auto& sfTrace = SwapForceVideoTrace::Get();
++	const bool sfMatched = mipIndex == 0 && sliceIndex == 0 && depth == 1 &&
++		sfTrace.Match(textureLoader.width, textureLoader.height, format, static_cast<uint32>(textureLoader.tileMode));
++	SwapForceVideoTrace::Event sfEvent;
++	bool sfSample = false;
++	if (sfMatched)
++	{
++		sfEvent = sfTrace.Begin("upload", physImagePtr, textureLoader.width, textureLoader.height, textureLoader.pitch,
++			reinterpret_cast<uintptr_t>(tex), tex->reloadCount);
++		sfSample = sfTrace.Sample(sfEvent);
++		if (sfSample) sfEvent.before = sfTrace.GuestRows(sfEvent);
++	}
+ 	// decode texture (if data is required)
+ #ifdef BENCHMARK_TEXTURE_DECODING
+ 	LARGE_INTEGER benchmark_begin;
+@@ -645,6 +658,11 @@ void LatteTextureLoader_UpdateTextureSliceData(LatteTexture* tex, uint32 sliceIn
+ 	{
+ 		texDecoder->decode(&textureLoader, pixelData);
+ 	}
++	if (sfSample)
++	{
++		sfEvent.decoded.assign(pixelData, pixelData + imageSize);
++		sfEvent.after = sfTrace.GuestRows(sfEvent);
++	}
+ #ifdef BENCHMARK_TEXTURE_DECODING
+ 	QueryPerformanceCounter(&benchmark_end);
+ 	QueryPerformanceFrequency(&benchmark_freq);
+@@ -681,6 +699,7 @@ void LatteTextureLoader_UpdateTextureSliceData(LatteTexture* tex, uint32 sliceIn
+ 	// load slice
+ 	//debug_printf("[Load Slice] Addr: %08x MIP: %02d Slice: %02d Res %04x/%04x Texel Res %04x/%04x Fmt %04x Tm %d\n", textureLoader.physAddress, mipIndex, sliceIndex, textureLoader.width, textureLoader.height, textureLoader.texelCountX, textureLoader.texelCountY, (int)format, tileMode);
+ 	LatteTextureLoader_loadTextureDataIntoSlice(tex, textureLoader.width, textureLoader.height, depth, mipLevels, pixelData, sliceIndex, mipIndex, imageSize);
++	if (sfMatched) sfTrace.Submit(std::move(sfEvent));
+ 	// write texture dump
+ 	if (textureLoader.dump)
+ 	{
+diff --git a/src/Cafe/OS/libs/gx2/GX2_Texture.cpp b/src/Cafe/OS/libs/gx2/GX2_Texture.cpp
+index b9badbe..7fdedee 100644
+--- a/src/Cafe/OS/libs/gx2/GX2_Texture.cpp
++++ b/src/Cafe/OS/libs/gx2/GX2_Texture.cpp
+@@ -7,6 +7,7 @@
+ #include "Cafe/HW/Latte/Core/LatteDraw.h"
+ #include "Cafe/HW/Latte/Core/LattePM4.h"
+ #include "Cafe/HW/Latte/ISA/LatteReg.h"
++#include "Cafe/HW/Latte/Core/SwapForceVideoTrace.h"
+ 
+ namespace GX2
+ {
+@@ -173,6 +174,17 @@ namespace GX2
+ 				mipPtr ^= (swizzle & 0xFFFF);
+ 		}
+ 
++		auto& sfTrace = SwapForceVideoTrace::Get();
++		if (sfTrace.Match(tex->surface.width, tex->surface.height, tex->surface.format, static_cast<uint32>(tex->surface.tileMode.value())))
++		{
++			auto e = sfTrace.Begin("bind", memory_virtualToPhysical(imagePtr), tex->surface.width, tex->surface.height, tex->surface.pitch);
++			e.unit = textureUnitIndex; e.stage = static_cast<uint32>(baseRegister);
++			auto* cpu = PPCInterpreter_getCurrentInstance();
++			if (cpu) { e.core = cpu->spr.UPIR; e.lr = cpu->spr.LR; }
++			if (sfTrace.Sample(e)) { e.before = sfTrace.GuestRows(e); e.after = sfTrace.GuestRows(e); }
++			sfTrace.Submit(std::move(e));
++		}
++
+ 		gx2WriteGather_submit(pm4HeaderType3(IT_SET_RESOURCE, 8),
+ 			baseRegister + textureUnitIndex * 7 - mmSQ_TEX_RESOURCE_WORD0,
+ 			tex->regTexWord0,

@@ -1,0 +1,25 @@
+# Large capture/trace data remain local; see EVIDENCE-STORAGE.md.
+*.mp4
+*.r8
+*.png
+events.jsonl
+merged-events.json
+__pycache__/
+!/multicore-corrupt.png
+!/multicore-trace/boundary-pair/guest-bind.png
+!/multicore-trace/boundary-pair/upload-before.png
+!/multicore-trace/boundary-pair/actual-decoded.png
+!/light-trace/singlecore-baseline24/audit-corrupt-24.458333.png
+!/light-trace/pacing-control-before/dense-24.png
+!/light-trace/pacing-control-after/dense-24.png
+!/light-trace/command-nested-enabled/dense-24.png
+!/light-trace/command-nested-enabled/dense-26.png
+!/magic-black-break-final.png
+!/light-trace/pacing-delay1000/dense-22.png
+!/light-trace/pacing-delay1000/dense-24.png
+!/light-trace/pacing-delay1000/dense-26.png
+!/light-trace/pacing-delay1000/dense-28.png
+!/light-trace/pacing-retirement/dense-22.png
+!/light-trace/pacing-retirement/dense-24.png
+!/light-trace/pacing-retirement/dense-26.png
+!/light-trace/pacing-retirement/dense-28.png

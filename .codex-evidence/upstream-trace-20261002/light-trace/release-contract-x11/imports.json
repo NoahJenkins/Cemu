@@ -1,0 +1,1642 @@
+[
+  {
+    "guest_import": "0xe00000",
+    "native_symbol": "coreinit::coreinitExport_OSSwitchCoroutineAfterOSLoadCoroutine(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00004",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::DCFlushRange, coreinit::InitializeMemory()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.16597240216731643609] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00008",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::DCFlushRangeNoSync, coreinit::InitializeMemory()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.16597240216731643609] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0000c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::DCZeroRange, coreinit::InitializeMemory()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.16597240216731643609] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00010",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSAddClient, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00014",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSCloseDir, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00018",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSCloseFile, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0001c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSDelClient, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00020",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSFlushQuota, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00024",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe00124",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSGetLastErrorCodeForViewer, coreinit::InitializeFS()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00128",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSGetPosFile, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0012c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSGetStatFile, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00130",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSInit, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00134",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSInitCmdBlock, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00138",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSIsEof, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0013c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSMakeDir, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00140",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSOpenDir, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00144",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSOpenFile, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00148",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSReadDir, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0014c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSReadFile, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00150",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSReadFileWithPos, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00154",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSRemove, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00158",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSRename, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0015c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSSetPosFile, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00160",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe00260",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSShutdown, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00264",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSTruncateFile, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00268",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSWriteFile, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0026c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::FSWriteFileWithPos, coreinit::InitializeFS()::StringWrapper, (LogType)0>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00270",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe00370",
+    "native_symbol": "coreinit::coreinitExport_IMEnableDim(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00374",
+    "native_symbol": "coreinitExport_MCP_Close(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00378",
+    "native_symbol": "coreinitExport_MCP_GetSysProdSettings(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0037c",
+    "native_symbol": "coreinitExport_MCP_Open(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00380",
+    "native_symbol": "coreinit::export_MEMAllocFromExpHeapEx(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00384",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::MEMAllocFromFrmHeapEx, coreinit::InitializeMEMFrmHeap()::StringWrapper, (LogType)8>(PPCInterpreter_t*) [clone .llvm.254049147088526996] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00388",
+    "native_symbol": "coreinit::export_MEMCreateExpHeapEx(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0038c",
+    "native_symbol": "coreinit::export_MEMDestroyExpHeap(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00390",
+    "native_symbol": "coreinit::export_MEMFreeToExpHeap(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00394",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::MEMFreeToFrmHeap, coreinit::InitializeMEMFrmHeap()::StringWrapper, (LogType)8>(PPCInterpreter_t*) [clone .llvm.254049147088526996] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00398",
+    "native_symbol": "coreinit::export_MEMGetAllocatableSizeForExpHeapEx(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0039c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::MEMGetAllocatableSizeForFrmHeapEx, coreinit::InitializeMEMFrmHeap()::StringWrapper, (LogType)8>(PPCInterpreter_t*) [clone .llvm.254049147088526996] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe003a0",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::MEMGetBaseHeapHandle, coreinit::InitializeMEM()::StringWrapper, (LogType)8>(PPCInterpreter_t*) [clone .llvm.12530718699223467811] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe003a4",
+    "native_symbol": "coreinit::export_MEMGetSizeForMBlockExpHeap(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe003a8",
+    "native_symbol": "coreinit::export_MEMGetTotalFreeSizeForExpHeap(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe003ac",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSAddAtomic64, coreinit::InitializeAtomic()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.16958967408256168270] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe003b0",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSAndAtomic64, coreinit::InitializeAtomic()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.16958967408256168270] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe003b4",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSBlockMove, coreinit::InitializeMemory()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.16597240216731643609] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe003b8",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSBlockSet, coreinit::InitializeMemory()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.16597240216731643609] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe003bc",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe004bc",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSCompareAndSwapAtomic64, coreinit::InitializeAtomic()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.16958967408256168270] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe004c0",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSConsoleWrite, coreinit::miscInit()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.639160525953400448] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe004c4",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSCreateThread, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe004c8",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSDetachThread, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe004cc",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSDynLoad_Acquire, coreinit::InitializeDynLoad()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.8574251094892058091] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe004d0",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSDynLoad_FindExport, coreinit::InitializeDynLoad()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.8574251094892058091] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe004d4",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSDynLoad_Release, coreinit::InitializeDynLoad()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.8574251094892058091] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe004d8",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSDynLoad_SetAllocator, coreinit::InitializeDynLoad()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.8574251094892058091] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe004dc",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe005dc",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSEnableHomeButtonMenu, coreinit::miscInit()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.639160525953400448] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe005e0",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSGetConsoleType, coreinit::InitializeCore()::StringWrapper, (LogType)16>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe005e4",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSGetCoreId, coreinit::InitializeCore()::StringWrapper, (LogType)16>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe005e8",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSGetCurrentThread, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe005ec",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSGetSemaphoreCount, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe005f0",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSGetSystemInfo, coreinit::InitializeSystemInfo()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.13604493999500587240] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe005f4",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSGetThreadPriority, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe005f8",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSGetThreadSpecific, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe005fc",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSGetTick, coreinit::InitializeTimeAndCalendar()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.8337307516899844872] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00600",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSGetTime, coreinit::InitializeTimeAndCalendar()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.8337307516899844872] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00604",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSInitCond, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00608",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSInitEventEx, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0060c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSInitMutex, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00610",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSInitMutexEx, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00614",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSInitSemaphore, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00618",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSInitSemaphoreEx, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0061c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSIsDebuggerInitialized, coreinit::InitializeCore()::StringWrapper, (LogType)16>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00620",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSIsDebuggerPresent, coreinit::InitializeCore()::StringWrapper, (LogType)16>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00624",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSIsThreadTerminated, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00628",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSJoinThread, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0062c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSLockMutex, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00630",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSOrAtomic64, coreinit::InitializeAtomic()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.16958967408256168270] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00634",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSPanic, coreinit::InitializeCore()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00638",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSReport, coreinit::miscInit()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.639160525953400448] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0063c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSResetEvent, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00640",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSResumeThread, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00644",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe00744",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe00844",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe00944",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSSetThreadAffinity, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00948",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSSetThreadName, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0094c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSSetThreadPriority, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00950",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSSetThreadSpecific, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00954",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSSignalCond, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00958",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSSignalEvent, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0095c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSSignalEventAll, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00960",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSSignalSemaphore, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00964",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSSleepTicks, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00968",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSTicksToCalendarTime, coreinit::InitializeTimeAndCalendar()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.8337307516899844872] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0096c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSTryLockMutex, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00970",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSTryWaitSemaphore, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00974",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSUnlockMutex, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00978",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSWaitCond, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0097c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSWaitEvent, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00980",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSWaitEventWithTimeout, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00984",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSWaitSemaphore, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00988",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSYieldThread, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0098c",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe00a8c",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe00b8c",
+    "native_symbol": "coreinitExport_UCReadSysConfig(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00b90",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe00c90",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::__gh_errno_ptr, coreinit::InitializeGHS()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.3067984612173973684] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00c94",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::__gh_set_errno, coreinit::InitializeGHS()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.3067984612173973684] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00c98",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::__ghsLock, coreinit::InitializeGHS()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.3067984612173973684] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00c9c",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::__ghsUnlock, coreinit::InitializeGHS()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.3067984612173973684] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00ca0",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::__ghs_flock_destroy, coreinit::InitializeGHS()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.3067984612173973684] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00ca4",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::__ghs_flock_file, coreinit::InitializeGHS()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.3067984612173973684] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00ca8",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::__ghs_flock_ptr, coreinit::InitializeGHS()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.3067984612173973684] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cac",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::__ghs_funlock_file, coreinit::InitializeGHS()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.3067984612173973684] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cb0",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::__ghs_mtx_dst, coreinit::InitializeGHS()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.3067984612173973684] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cb4",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::__ghs_mtx_init, coreinit::InitializeGHS()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.3067984612173973684] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cb8",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::__ghs_mtx_lock, coreinit::InitializeGHS()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.3067984612173973684] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cbc",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::__ghs_mtx_unlock, coreinit::InitializeGHS()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.3067984612173973684] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cc0",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::coreinit_exit, coreinit::miscInit()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.639160525953400448] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cc4",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::coreinit_memcpy, coreinit::InitializeMemory()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.16597240216731643609] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cc8",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::coreinit_memmove, coreinit::InitializeMemory()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.16597240216731643609] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00ccc",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::coreinit_memset, coreinit::InitializeMemory()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.16597240216731643609] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cd0",
+    "native_symbol": "nsyshid::export_HIDAddClient(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cd4",
+    "native_symbol": "nsyshid::export_HIDDelClient(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cd8",
+    "native_symbol": "nsyshid::export_HIDRead(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cdc",
+    "native_symbol": "nsyshid::export_HIDSetIdle(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00ce0",
+    "native_symbol": "nsyshid::export_HIDSetProtocol(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00ce4",
+    "native_symbol": "nsyshid::export_HIDSetReport(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00ce8",
+    "native_symbol": "nlibcurl::export_curl_easy_cleanup(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cec",
+    "native_symbol": "nlibcurl::export_curl_easy_getinfo(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cf0",
+    "native_symbol": "void cafeExportCallWrapper<&nlibcurl::curl_easy_init, nlibcurl::$_4::RPLMapped()::StringWrapper, (LogType)41>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cf4",
+    "native_symbol": "nlibcurl::export_curl_easy_setopt(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cf8",
+    "native_symbol": "nlibcurl::export_curl_easy_strerror(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00cfc",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe00dfc",
+    "native_symbol": "void cafeExportCallWrapper<&nlibcurl::curl_global_init_mem, nlibcurl::$_4::RPLMapped()::StringWrapper, (LogType)41>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00e00",
+    "native_symbol": "nlibcurl::export_curl_multi_add_handle(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00e04",
+    "native_symbol": "nlibcurl::export_curl_multi_cleanup(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00e08",
+    "native_symbol": "nlibcurl::export_curl_multi_info_read(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00e0c",
+    "native_symbol": "nlibcurl::export_curl_multi_init(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00e10",
+    "native_symbol": "nlibcurl::export_curl_multi_perform(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00e14",
+    "native_symbol": "nlibcurl::export_curl_multi_remove_handle(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00e18",
+    "native_symbol": "void cafeExportCallWrapper<&nlibcurl::curl_slist_append, nlibcurl::$_4::RPLMapped()::StringWrapper, (LogType)41>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00e1c",
+    "native_symbol": "void cafeExportCallWrapper<&nlibcurl::curl_slist_free_all, nlibcurl::$_4::RPLMapped()::StringWrapper, (LogType)41>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00e20",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe00f20",
+    "native_symbol": "nsysnet::export_NSSLAddServerPKIGroups(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00f24",
+    "native_symbol": "nsysnet::export_NSSLCreateContext(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00f28",
+    "native_symbol": "nsysnet::export_NSSLDestroyContext(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00f2c",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe0102c",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe0112c",
+    "native_symbol": "nsysnetExport_accept(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01130",
+    "native_symbol": "nsysnetExport_bind(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01134",
+    "native_symbol": "nsysnetExport_connect(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01138",
+    "native_symbol": "nsysnetExport_gethostbyname(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0113c",
+    "native_symbol": "nsysnetExport_getsockopt(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01140",
+    "native_symbol": "nsysnetExport_inet_aton(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01144",
+    "native_symbol": "nsysnetExport_inet_ntoa(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01148",
+    "native_symbol": "nsysnetExport_listen(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0114c",
+    "native_symbol": "nsysnetExport_ntohl(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01150",
+    "native_symbol": "nsysnetExport_ntohs(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01154",
+    "native_symbol": "nsysnetExport_recv(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01158",
+    "native_symbol": "nsysnetExport_recvfrom(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0115c",
+    "native_symbol": "nsysnetExport_select(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01160",
+    "native_symbol": "nsysnetExport_send(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01164",
+    "native_symbol": "nsysnetExport_sendto(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01168",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe01268",
+    "native_symbol": "nsysnetExport_setsockopt(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0126c",
+    "native_symbol": "nsysnetExport_socket(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01270",
+    "native_symbol": "nsysnetExport_socket_lib_finish(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01274",
+    "native_symbol": "nsysnetExport_socket_lib_init(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01278",
+    "native_symbol": "nsysnetExport_socketclose(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0127c",
+    "native_symbol": "nsysnetExport_socketlasterr(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01280",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2BeginDisplayListEx, GX2::GX2CommandInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.7626623557915920299] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01284",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2CalcColorBufferAuxInfo, GX2::GX2SurfaceInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17720129599052171197] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01288",
+    "native_symbol": "gx2Export_GX2CalcDRCSize(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0128c",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2CalcDepthBufferHiZInfo, GX2::GX2SurfaceInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17720129599052171197] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01290",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2CalcFetchShaderSizeEx, GX2::GX2ShaderInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.6371041727314124720] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01294",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2CalcSurfaceSizeAndAlignment, GX2::GX2SurfaceInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17720129599052171197] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01298",
+    "native_symbol": "gx2Export_GX2CalcTVSize(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0129c",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2ClearColor, GX2::GX2BlitInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.4500266588621209647] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe012a0",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2ClearDepthStencilEx, GX2::GX2BlitInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.4500266588621209647] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe012a4",
+    "native_symbol": "gx2Export_GX2ConvertDepthBufferToTextureSurface(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe012a8",
+    "native_symbol": "gx2Export_GX2CopyColorBufferToScanBuffer(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe012ac",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2CopyDisplayList, GX2::GX2CommandInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.7626623557915920299] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe012b0",
+    "native_symbol": "gx2Export_GX2CopySurface(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe012b4",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2DirectCallDisplayList, GX2::GX2CommandInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.7626623557915920299] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe012b8",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2DrawDone, GX2::GX2EventInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.1880278458182015891] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe012bc",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2DrawEx, GX2::GX2DrawInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.8916515051899059067] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe012c0",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2DrawIndexedEx, GX2::GX2DrawInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.8916515051899059067] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe012c4",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2EndDisplayList, GX2::GX2CommandInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.7626623557915920299] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe012c8",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe013c8",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe014c8",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2Flush, GX2::GX2CommandInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.7626623557915920299] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe014cc",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2GetDisplayListWriteStatus, GX2::GX2CommandInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.7626623557915920299] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe014d0",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2GetLastSubmittedTimeStamp, GX2::GX2CommandInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.7626623557915920299] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe014d4",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2GetRetiredTimeStamp, GX2::GX2CommandInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.7626623557915920299] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe014d8",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2GetSurfaceFormatBits, GX2::GX2SurfaceInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17720129599052171197] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe014dc",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2GetSurfaceSwizzle, GX2::GX2SurfaceInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17720129599052171197] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe014e0",
+    "native_symbol": "gx2Export_GX2GetSwapStatus(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe014e4",
+    "native_symbol": "coreinitExport_GX2GetSystemTVAspectRatio(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe014e8",
+    "native_symbol": "coreinitExport_GX2GetSystemTVScanMode(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe014ec",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2Init, GX2::GX2MiscInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.16514295373707244710] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe014f0",
+    "native_symbol": "gx2Export_GX2InitColorBufferRegs(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe014f4",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe015f4",
+    "native_symbol": "gx2Export_GX2InitDepthBufferRegs(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe015f8",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2InitFetchShaderEx, GX2::GX2ShaderInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.6371041727314124720] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe015fc",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2InitSampler, GX2::GX2TextureInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.13256129260571715324] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01600",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2InitSamplerBorderType, GX2::GX2TextureInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.13256129260571715324] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01604",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2InitSamplerClamping, GX2::GX2TextureInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.13256129260571715324] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01608",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2InitSamplerDepthCompare, GX2::GX2TextureInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.13256129260571715324] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0160c",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2InitSamplerLOD, GX2::GX2TextureInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.13256129260571715324] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01610",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2InitSamplerXYFilter, GX2::GX2TextureInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.13256129260571715324] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01614",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2InitSamplerZMFilter, GX2::GX2TextureInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.13256129260571715324] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01618",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2InitTextureRegs, GX2::GX2TextureInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.13256129260571715324] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0161c",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2Invalidate, GX2::GX2MiscInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.16514295373707244710] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01620",
+    "native_symbol": "gx2Export_GX2ResolveAAColorBuffer(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01624",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetAlphaTest, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01628",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe01728",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetAttribBuffer, GX2::GX2DrawInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.8916515051899059067] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0172c",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetBlendConstantColor, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01730",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetBlendControl, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01734",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetClearDepthStencil, GX2::GX2BlitInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.4500266588621209647] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01738",
+    "native_symbol": "gx2Export_GX2SetColorBuffer(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0173c",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetColorControl, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01740",
+    "native_symbol": "gx2Export_GX2SetContextState(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01744",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetCullOnlyControl, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01748",
+    "native_symbol": "gx2Export_GX2SetDRCBuffer(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0174c",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe0184c",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetDRCGamma, GX2::GX2MiscInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.16514295373707244710] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01850",
+    "native_symbol": "gx2Export_GX2SetDRCScale(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01854",
+    "native_symbol": "gx2Export_GX2SetDefaultState(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01858",
+    "native_symbol": "gx2Export_GX2SetDepthBuffer(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0185c",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetDepthOnlyControl, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01860",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetDepthStencilControl, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01864",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetFetchShader, GX2::GX2ShaderInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.6371041727314124720] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01868",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe01968",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe01a68",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe01b68",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetPixelSampler, GX2::GX2TextureInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.13256129260571715324] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01b6c",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetPixelSamplerBorderColor, GX2::GX2TextureInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.13256129260571715324] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01b70",
+    "native_symbol": "gx2Export_GX2SetPixelShader(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01b74",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetPixelTexture, GX2::GX2TextureInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.13256129260571715324] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01b78",
+    "native_symbol": "gx2Export_GX2SetPixelUniformBlock(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01b7c",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetPixelUniformReg, GX2::GX2ShaderInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.6371041727314124720] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01b80",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetPointLimits, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01b84",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetPointSize, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01b88",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetPolygonControl, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01b8c",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetPolygonOffset, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01b90",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetPrimitiveRestartIndex, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01b94",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetRasterizerClipControl, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01b98",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetScissor, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01b9c",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetShaderModeEx, GX2::GX2ShaderInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.6371041727314124720] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ba0",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetStencilMask, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ba4",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetStreamOutEnable, GX2::GX2StreamoutInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.6951948835656721055] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ba8",
+    "native_symbol": "gx2Export_GX2SetSwapInterval(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01bac",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetTVBuffer, GX2::GX2MiscInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.16514295373707244710] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01bb0",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe01cb0",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetTVGamma, GX2::GX2MiscInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.16514295373707244710] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01cb4",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe01db4",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetTargetChannelMasks, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01db8",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe01eb8",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetVertexSampler, GX2::GX2TextureInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.13256129260571715324] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ebc",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetVertexSamplerBorderColor, GX2::GX2TextureInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.13256129260571715324] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ec0",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetVertexShader, GX2::GX2ShaderInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.6371041727314124720] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ec4",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetVertexTexture, GX2::GX2TextureInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.13256129260571715324] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ec8",
+    "native_symbol": "gx2Export_GX2SetVertexUniformBlock(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ecc",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetVertexUniformReg, GX2::GX2ShaderInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.6371041727314124720] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ed0",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2SetViewport, GX2::GX2StateInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.17994727990159811310] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ed4",
+    "native_symbol": "gx2Export_GX2SetupContextStateEx(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ed8",
+    "native_symbol": "gx2Export_GX2SwapScanBuffers(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01edc",
+    "native_symbol": "gx2Export_GX2TempGetGPUVersion(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ee0",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2WaitForVsync, GX2::GX2EventInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.1880278458182015891] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ee4",
+    "native_symbol": "void cafeExportCallWrapper<&GX2::GX2WaitTimeStamp, GX2::GX2CommandInit()::StringWrapper, (LogType)1>(PPCInterpreter_t*) [clone .llvm.7626623557915920299] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ee8",
+    "native_symbol": "void cafeExportCallWrapper<&proc_ui::ProcUIDrawDoneRelease, proc_ui::$_1::RPLMapped()::StringWrapper, (LogType)39>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01eec",
+    "native_symbol": "void cafeExportCallWrapper<&proc_ui::ProcUIInit, proc_ui::$_1::RPLMapped()::StringWrapper, (LogType)39>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ef0",
+    "native_symbol": "void cafeExportCallWrapper<&proc_ui::ProcUIProcessMessages, proc_ui::$_1::RPLMapped()::StringWrapper, (LogType)39>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ef4",
+    "native_symbol": "void cafeExportCallWrapper<&proc_ui::ProcUIRegisterCallback, proc_ui::$_1::RPLMapped()::StringWrapper, (LogType)39>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01ef8",
+    "native_symbol": "void cafeExportCallWrapper<&proc_ui::ProcUIShutdown, proc_ui::$_1::RPLMapped()::StringWrapper, (LogType)39>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01efc",
+    "native_symbol": "void cafeExportCallWrapper<&snd_user::AXFXMultiChReverbShutdown, snd_user::$_1::RPLMapped()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01f00",
+    "native_symbol": "void cafeExportCallWrapper<&snd_user::AXFXSetHooks, snd_user::$_1::RPLMapped()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01f04",
+    "native_symbol": "snd_core::export_AXAcquireVoice(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01f08",
+    "native_symbol": "snd_core::export_AXFreeVoice(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01f0c",
+    "native_symbol": "snd_core::export_AXGetDeviceMode(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01f10",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXGetVoiceOffsets, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01f14",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::sndcore1_AXInit, snd_core::$_1::RPLMapped()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01f18",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXIsInit, snd_core::$_1::RPLMapped()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01f1c",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXIsVoiceRunning, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01f20",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXQuit, snd_core::$_1::RPLMapped()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01f24",
+    "native_symbol": "snd_core::export_AXRegisterAuxCallback(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01f28",
+    "native_symbol": "snd_core::export_AXRegisterDeviceFinalMixCallback(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe01f2c",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe0202c",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe0212c",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXSetDefaultMixerSelect, snd_core::$_1::RPLMapped()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02130",
+    "native_symbol": "snd_core::export_AXSetDeviceUpsampleStage(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02134",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe02234",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXSetVoiceAdpcm, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02238",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXSetVoiceAdpcmLoop, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0223c",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXSetVoiceCurrentOffset, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02240",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXSetVoiceDeviceMix, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02244",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXSetVoiceEndOffset, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02248",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXSetVoiceLoop, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0224c",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXSetVoiceOffsets, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02250",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXSetVoiceSrc, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02254",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXSetVoiceSrcRatio, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02258",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXSetVoiceSrcType, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0225c",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXSetVoiceState, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02260",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXSetVoiceType, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02264",
+    "native_symbol": "void cafeExportCallWrapper<&snd_core::AXSetVoiceVe, snd_core::RegisterVoiceFunctions()::StringWrapper, (LogType)4>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02268",
+    "native_symbol": "snd_core::export_AXVoiceBegin(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0226c",
+    "native_symbol": "snd_core::export_AXVoiceEnd(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02270",
+    "native_symbol": "vpadExport_VPADControlMotor(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02274",
+    "native_symbol": "vpadExport_VPADGetTPCalibratedPoint(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02278",
+    "native_symbol": "void cafeExportCallWrapper<&vpad::VPADRead, vpad::$_6::RPLMapped()::StringWrapper, (LogType)5>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0227c",
+    "native_symbol": "vpadExport_VPADSetAccParam(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02280",
+    "native_symbol": "vpadExport_VPADStopMotor(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02284",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe02384",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe02484",
+    "native_symbol": "nnAcExport_ACGetAssignedAddress(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02488",
+    "native_symbol": "void cafeExportCallWrapper<&nn_ac::ACGetStatus, nn_ac::load()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0248c",
+    "native_symbol": "void cafeExportCallWrapper<&nn_ac::ACInitialize, nn_ac::load()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02490",
+    "native_symbol": "void cafeExportCallWrapper<&nn_ac::ACIsFailure, nn_ac::load()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02494",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe02594",
+    "native_symbol": "void cafeExportCallWrapper<&nn_ac::Connect, nn_ac::load()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02598",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe02698",
+    "native_symbol": "void cafeExportCallWrapper<&nn_ac::GetConnectResult, nn_ac::load()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0269c",
+    "native_symbol": "void cafeExportCallWrapper<&nn_ac::GetLastErrorCode, nn_ac::load()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe026a0",
+    "native_symbol": "void cafeExportCallWrapper<&nn_ac::Initialize, nn_ac::load()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe026a4",
+    "native_symbol": "void cafeExportCallWrapper<&nn_ac::IsApplicationConnected, nn_ac::load()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe026a8",
+    "native_symbol": "nnActExport_AcquireIndependentServiceToken(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe026ac",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe027ac",
+    "native_symbol": "nnActExport_GetAccountId(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027b0",
+    "native_symbol": "void cafeExportCallWrapper<&nn::act::GetErrorCode, nn::act::$_1::RPLMapped()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027b4",
+    "native_symbol": "nnActExport_GetMii(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027b8",
+    "native_symbol": "nnActExport_GetPrincipalId(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027bc",
+    "native_symbol": "nnActExport_GetSlotNo(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027c0",
+    "native_symbol": "nnActExport_GetTransferableIdEx(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027c4",
+    "native_symbol": "nnActExport_Initialize(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027c8",
+    "native_symbol": "nnActExport_IsNetworkAccount(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027cc",
+    "native_symbol": "void cafeExportCallWrapper<&nn::fp::Finalize, nn::fp::$_2::RPLMapped()::StringWrapper, (LogType)24>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027d0",
+    "native_symbol": "void cafeExportCallWrapper<&nn::fp::GetFriendAccountId, nn::fp::$_2::RPLMapped()::StringWrapper, (LogType)24>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027d4",
+    "native_symbol": "void cafeExportCallWrapper<&nn::fp::GetFriendList, nn::fp::$_2::RPLMapped()::StringWrapper, (LogType)24>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027d8",
+    "native_symbol": "void cafeExportCallWrapper<&nn::fp::GetFriendMii, nn::fp::$_2::RPLMapped()::StringWrapper, (LogType)24>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027dc",
+    "native_symbol": "void cafeExportCallWrapper<&nn::fp::GetFriendPresence, nn::fp::$_2::RPLMapped()::StringWrapper, (LogType)24>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027e0",
+    "native_symbol": "void cafeExportCallWrapper<&nn::fp::GetMyPrincipalId, nn::fp::$_2::RPLMapped()::StringWrapper, (LogType)24>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027e4",
+    "native_symbol": "void cafeExportCallWrapper<&nn::fp::HasLoggedIn, nn::fp::$_2::RPLMapped()::StringWrapper, (LogType)24>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027e8",
+    "native_symbol": "void cafeExportCallWrapper<&nn::fp::Initialize, nn::fp::$_2::RPLMapped()::StringWrapper, (LogType)24>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027ec",
+    "native_symbol": "void cafeExportCallWrapper<&nn::fp::IsInitialized, nn::fp::$_2::RPLMapped()::StringWrapper, (LogType)24>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027f0",
+    "native_symbol": "void cafeExportCallWrapper<&nn::fp::LoginAsync, nn::fp::$_2::RPLMapped()::StringWrapper, (LogType)24>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe027f4",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe028f4",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe029f4",
+    "native_symbol": "void cafeExportCallWrapper<&nn::fp::SetNotificationHandler, nn::fp::$_2::RPLMapped()::StringWrapper, (LogType)24>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe029f8",
+    "native_symbol": "void cafeExportCallWrapper<&nn::save::SAVEFlushQuota, nn::save::$_1::RPLMapped()::StringWrapper, (LogType)7>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe029fc",
+    "native_symbol": "void cafeExportCallWrapper<&nn::save::SAVEGetFreeSpaceSize, nn::save::$_1::RPLMapped()::StringWrapper, (LogType)7>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02a00",
+    "native_symbol": "void cafeExportCallWrapper<&nn::save::SAVEGetSharedDataTitlePath, nn::save::$_1::RPLMapped()::StringWrapper, (LogType)7>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02a04",
+    "native_symbol": "void cafeExportCallWrapper<&nn::save::SAVEGetSharedSaveDataPath, nn::save::$_1::RPLMapped()::StringWrapper, (LogType)7>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02a08",
+    "native_symbol": "void cafeExportCallWrapper<&nn::save::SAVEGetStat, nn::save::$_1::RPLMapped()::StringWrapper, (LogType)7>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02a0c",
+    "native_symbol": "void cafeExportCallWrapper<&nn::save::SAVEInit, nn::save::$_1::RPLMapped()::StringWrapper, (LogType)7>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02a10",
+    "native_symbol": "void cafeExportCallWrapper<&nn::save::SAVEInitSaveDir, nn::save::$_1::RPLMapped()::StringWrapper, (LogType)7>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02a14",
+    "native_symbol": "void cafeExportCallWrapper<&nn::save::SAVEOpenFile, nn::save::$_1::RPLMapped()::StringWrapper, (LogType)7>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02a18",
+    "native_symbol": "void cafeExportCallWrapper<&nn::save::SAVERemove, nn::save::$_1::RPLMapped()::StringWrapper, (LogType)7>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02a1c",
+    "native_symbol": "void cafeExportCallWrapper<&nn::save::SAVERename, nn::save::$_1::RPLMapped()::StringWrapper, (LogType)7>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02a20",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe02b20",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe02c20",
+    "native_symbol": "padscore::export_KPADEnableDPD(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02c24",
+    "native_symbol": "padscore::export_KPADInit(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02c28",
+    "native_symbol": "padscoreExport_KPADRead(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02c2c",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe02d2c",
+    "native_symbol": "padscoreExport_KPADSetConnectCallback(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02d30",
+    "native_symbol": "padscoreExport_WPADControlMotor(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02d34",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe02e34",
+    "native_symbol": "padscoreExport_WPADProbe(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e38",
+    "native_symbol": "sysappExport__SYSGetSystemApplicationTitleId(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e3c",
+    "native_symbol": "coreinit::threadEntry(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e40",
+    "native_symbol": "coreinit::coreinitExport_OSExitThreadDepr(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e44",
+    "native_symbol": "coreinit::__OSTerminatorThreadFunc(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e48",
+    "native_symbol": "coreinit::_OSAlarmThread(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e4c",
+    "native_symbol": "coreinit::__IPCDriverThreadFunc(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e50",
+    "native_symbol": "_coreinitCallbackThread(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e54",
+    "native_symbol": "coreinit_start(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e58",
+    "native_symbol": "coreinit::export_default_MEMAllocFromDefaultHeap(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e5c",
+    "native_symbol": "coreinit::export_default_MEMAllocFromDefaultHeapEx(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e60",
+    "native_symbol": "coreinit::export_default_MEMFreeToDefaultHeap(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e64",
+    "native_symbol": "coreinit::default_DynLoadAlloc(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e68",
+    "native_symbol": "coreinit::default_DynLoadFree(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e6c",
+    "native_symbol": "_PPCCore_callbackExit(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e70",
+    "native_symbol": "proc_ui::$_1::rpl_entry(unsigned int, coreinit::RplEntryReason)::{lambda(PPCInterpreter_t*)#1}::__invoke(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e74",
+    "native_symbol": "proc_ui::$_1::rpl_entry(unsigned int, coreinit::RplEntryReason)::{lambda(PPCInterpreter_t*)#2}::__invoke(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e78",
+    "native_symbol": "proc_ui::$_1::rpl_entry(unsigned int, coreinit::RplEntryReason)::{lambda(PPCInterpreter_t*)#3}::__invoke(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e7c",
+    "native_symbol": "proc_ui::$_1::rpl_entry(unsigned int, coreinit::RplEntryReason)::{lambda(PPCInterpreter_t*)#4}::__invoke(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e80",
+    "native_symbol": "proc_ui::$_1::rpl_entry(unsigned int, coreinit::RplEntryReason)::{lambda(PPCInterpreter_t*)#5}::__invoke(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e84",
+    "native_symbol": "padscore::TickFunction(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e88",
+    "native_symbol": "vpad::TickFunction(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e8c",
+    "native_symbol": "GX2::__GX2CallbackThread(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e90",
+    "native_symbol": "_GX2DefaultAlloc_Alloc(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e94",
+    "native_symbol": "_GX2DefaultAlloc_Free(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e98",
+    "native_symbol": "_GX2DefaultAllocR_Alloc(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02e9c",
+    "native_symbol": "_GX2DefaultAllocR_Free(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02ea0",
+    "native_symbol": "coreinit::export___FSQueueDefaultFinishFunc(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02ea4",
+    "native_symbol": "coreinit::__FSAIoctlResponseCallback(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02ea8",
+    "native_symbol": "void cafeExportCallWrapper<&nn::erreula::ErrEulaAppearError, nn::erreula::$_1::RPLMapped()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02eac",
+    "native_symbol": "void cafeExportCallWrapper<&nn::erreula::ErrEulaCalc, nn::erreula::$_1::RPLMapped()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02eb0",
+    "native_symbol": "void cafeExportCallWrapper<&nn::erreula::ErrEulaCreate, nn::erreula::$_1::RPLMapped()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02eb4",
+    "native_symbol": "void cafeExportCallWrapper<&nn::erreula::ErrEulaDestroy, nn::erreula::$_1::RPLMapped()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02eb8",
+    "native_symbol": "void cafeExportCallWrapper<&nn::erreula::ErrEulaDisappearError, nn::erreula::$_1::RPLMapped()::StringWrapper, (LogType)62>(PPCInterpreter_t*) in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe02ebc",
+    "native_symbol": "No symbol matches 0x0."
+  },
+  {
+    "guest_import": "0xe02fbc",
+    "native_symbol": "No symbol matches 0x0."
+  }
+]

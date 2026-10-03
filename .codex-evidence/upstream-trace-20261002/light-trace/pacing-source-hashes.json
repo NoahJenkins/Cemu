@@ -1,0 +1,12 @@
+{
+  "src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.cpp": "7a73852d10d66ec065b5efcd4afa05ac7f50e44b24826c37deb754a388d9af8c",
+  "src/Cafe/HW/Latte/Core/LatteCommandProcessor.cpp": "da995e41213b6536582425cfeb16fb30ff383fd2ccd7a6dc0b34ab8d8d93751f",
+  "src/Cafe/HW/Latte/Core/LatteTextureLegacy.cpp": "1e10e0294891bc9325a25acb6abf538ab55c77309e95f08297cdbc8db783bb9a",
+  "src/Cafe/HW/Latte/Core/LatteTextureLoader.cpp": "0cc522f24d11004a5c9598c8360684766c29f70e32a9f2201512eec3ffb9b87b",
+  "src/Cafe/OS/libs/coreinit/coreinit_Memory.cpp": "f2acaaa7d3bf223593ace5cf341c186c75107c4777a394b0964f98faf94ee7d4",
+  "src/Cafe/OS/libs/coreinit/coreinit_Synchronization.cpp": "849eb9cfaaa620cc162627855bf1556fcc9e6a76d87a78963802236a1d4561d3",
+  "src/Cafe/OS/libs/gx2/GX2_Command.cpp": "f099236794935c59799e5fb05a50b535d31eb7b84393693127caa29f769b31dd",
+  "src/Cafe/OS/libs/gx2/GX2_Event.cpp": "3f3983e8e72cf8c4a678309c09fd82027ce3cd3e561b74cc6db97ccc136a8159",
+  "src/Cafe/OS/libs/gx2/GX2_Texture.cpp": "d217b7c6365f7371d18964a15720c36b09dee3a10bb10e853a63d5d860cc8c73",
+  "src/Cafe/HW/Latte/Core/SwapForceVideoTrace.h": "295a0cc8e768a12509e8cd3d176f61c66bab81faa9bdfe1e8bf2cb8f43c35f27"
+}

@@ -1,0 +1,1 @@
+pid=655090 window=98566147 display=:0 cpu_profile=3

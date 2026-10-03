@@ -1,0 +1,17 @@
+{
+  "binary": "771c5a10b849d3b64ba5a329e04ca8b3d5e2d279d5d1bac526f593d6fc490a9f",
+  "profile": "db8f88edb400fb93ac73753cd36c83bd3f8af9b5f4b1989e6dcc211b665c7bc0",
+  "figure": "a3a47947f13a0ab3fb4f382bd0b287cdc13eca686554c9d081195b635b142d10",
+  "saves": {
+    "meta/iconTex.tga": "5af5b352b4b0f4854031e0cfc5cb56a3c323b6f54521422e80a7ec8df5d9fc7f",
+    "meta/meta.xml": "f9af8071d522f29ab1f43477e22e05440c4dd021e81ca176d1f4d38b8cf5ff5d",
+    "user/80000001/SWAPFORCE_0.sav": "2fa9510e7b7dba001cfe91f7b2003d5462cfca0fc608ab5a53ee1e470c5dd3e1",
+    "user/80000001/SWAPFORCE_OPTIONS.sav": "a39a83887ebf29f4cee11ac665aedb375e89780488876d4499093657473b36e5"
+  },
+  "older_source_patch": "8df835b63887ed8058218eb3ade930cb4dd0d4b9b62d062f0f41377b5f214995",
+  "processes": [
+    " 738819 kwin_x11"
+  ],
+  "running_test_units": "  UNIT LOAD ACTIVE SUB DESCRIPTION\n\n0 loaded units listed.\n",
+  "containers": ""
+}

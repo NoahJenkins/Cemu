@@ -1,5 +1,22 @@
 # SWAP Force movie corruption investigation
 
+## Current-upstream audit correction — 2026-10-02
+
+Dense review now finds brief ghosts in the unmodified upstream single-core
+recording. New isolated Desktop X11 runs of installed Cemu 2.6 also show bursts
+in both CPU modes. Earlier clean scene samples do not establish clean runs.
+Keep the installed workaround: the user completed a level successfully with it.
+The leading investigation area remains frame production, buffer/command
+lifetime, and GPU consumption. No instruction or synchronization fault is proved.
+See [the audit](upstream-trace-20261002/AUDIT.md) for evidence and next tests.
+Follow-up [pacing tests](upstream-trace-20261002/PACING.md) show that a fixed
+1 ms delay can also suppress the reviewed ghosts without always waiting for
+retirement. A [command-lifetime check](upstream-trace-20261002/COMMAND-LIFETIME.md)
+found unchanged hashes in 480 main and 960 nested executions while corruption
+remained visible. Prioritize movie-plane reuse and texture publication/cache
+behavior; neither result proves the exact emulator fault.
+The historical results below retain their original sampling limits.
+
 ## Gameplay and crash follow-up — 2026-10-02
 
 After the controlled tests, the user reported completing the first level without any issues using the installed workaround. This is user-reported full-level validation; the automated tests below cover only early gameplay. It does not establish that the multicore or display-session defects are fixed.
@@ -26,7 +43,7 @@ A per-game single-core recompiler workaround is verified and installed on the De
 | Installed Cemu 2.6, copied save and single-core recompiler | Story sequence reaches the portal prompt; sampled moving frames are clean | `retest-20261001/singlecore-story.mp4` |
 | Installed Cemu 2.6, final profile copied from live config | Log confirms `CPU-Mode: 1 (gameprofile)`; sampled moving scene has no prominent color ghosts | `retest-20261001/final-profile-moving.png` (18.5 seconds) |
 
-These are different capture times in the same animation, not pixel-identical game frames. Interpreter mode and FPU fallback also change timing. Single-core recompiler removes the color ghosts without changing generated instruction semantics, so the current evidence points toward timing or concurrency. It does not isolate a floating point instruction bug. `GX2DrawDone` already forces full sync for Vulkan in the source, which explains why its config switch did not help.
+These are different capture times in the same animation, not pixel-identical game frames. Interpreter mode and FPU fallback also change timing. Single-core recompiler removed the prominent ghosts from those sampled scenes without changing generated instruction semantics. The later audit found brief bursts in both modes; timing remains a candidate, not a proved mode-specific cause. It does not isolate a floating point instruction bug. `GX2DrawDone` already forces full sync for Vulkan in the source, which explains why its config switch did not help.
 
 Recordings are in `/home/deck/CemuSwapForceTest/<variant>/evidence/intro.mp4` on the Deck. Variants are `installed-2.6-video-20261001`, `main-baseline-video-20261001`, `main-skip-video-20261001`, `main-no-floatcopy-20261001`, and `main-interpreter-video-20261001`. Recompiler recordings are 42 seconds at 12 FPS. The interpreter recording is 139.5 seconds at 4 FPS. `record-deck-intro.sh` records the actual Xwayland Cemu window using isolated settings and MLC copies.
 

@@ -1,0 +1,1 @@
+pid=730220 window=35651587 display=:0 cpu_profile=3

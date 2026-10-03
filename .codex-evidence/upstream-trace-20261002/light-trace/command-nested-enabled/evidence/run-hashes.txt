@@ -1,0 +1,2 @@
+7c25334ab5f39e3338423346e9733a08c2fb8457b94544e274558e591e919da4  /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_command_nested_0a2b6ff
+3a2438ea7505de685dd0cc9756e308e30164f6df730acaf06ba80e1337856524  /home/deck/CemuSwapForceTest/upstream-0a2b6ff-command-nested-enabled-20261002/xdg/config/Cemu/gameProfiles/0005000010139200.ini

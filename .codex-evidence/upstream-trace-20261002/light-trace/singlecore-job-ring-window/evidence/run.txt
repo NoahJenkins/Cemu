@@ -1,0 +1,1 @@
+pid=679924 window=98566147 display=:0 cpu_profile=1

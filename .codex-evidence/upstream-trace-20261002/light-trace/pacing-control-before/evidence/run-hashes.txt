@@ -1,0 +1,2 @@
+97eadd91661763520780e4376b5161aad4a8e3a7a6cc703b811f711091ba3589  /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_pacing_0a2b6ff
+3a2438ea7505de685dd0cc9756e308e30164f6df730acaf06ba80e1337856524  /home/deck/CemuSwapForceTest/upstream-0a2b6ff-pacing-control-before-20261002/xdg/config/Cemu/gameProfiles/0005000010139200.ini

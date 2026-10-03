@@ -1,0 +1,10 @@
+{
+  "variant": "delay2000",
+  "switches": {
+    "CEMU_SWAPFORCE_POST_MOVIE_DELAY_US": "2000"
+  },
+  "trace": false,
+  "cpu_mode": 3,
+  "capture_fps": 24,
+  "duration": 50
+}

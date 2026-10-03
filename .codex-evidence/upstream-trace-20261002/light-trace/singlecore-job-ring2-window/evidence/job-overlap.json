@@ -1,0 +1,436 @@
+[
+  {
+    "job_event": 106,
+    "job": "0x1e255860",
+    "job_dimensions": [
+      1040,
+      620
+    ],
+    "frame_index": 0,
+    "requested_output_index": 1,
+    "job_output_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "bind_ids": [
+      1,
+      2,
+      3
+    ],
+    "bound_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "same_plane_triplet": true,
+    "movie_submit_id": 74,
+    "movie_retire_id": 138,
+    "queued_before_movie_retirement": true,
+    "job_time_us": 25031386,
+    "movie_retire_time_us": 25032383
+  },
+  {
+    "job_event": 110,
+    "job": "0x1e255860",
+    "job_dimensions": [
+      1040,
+      620
+    ],
+    "frame_index": 0,
+    "requested_output_index": 1,
+    "job_output_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "bind_ids": [
+      1,
+      2,
+      3
+    ],
+    "bound_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "same_plane_triplet": true,
+    "movie_submit_id": 74,
+    "movie_retire_id": 138,
+    "queued_before_movie_retirement": true,
+    "job_time_us": 25031389,
+    "movie_retire_time_us": 25032383
+  },
+  {
+    "job_event": 427,
+    "job": "0x1e255860",
+    "job_dimensions": [
+      1040,
+      620
+    ],
+    "frame_index": 1,
+    "requested_output_index": 0,
+    "job_output_planes": [
+      "0x1fb28900",
+      "0x1fd28a00",
+      "0x1fda8b00"
+    ],
+    "bind_ids": [
+      322,
+      323,
+      324
+    ],
+    "bound_planes": [
+      "0x1fb28900",
+      "0x1fd28a00",
+      "0x1fda8b00"
+    ],
+    "same_plane_triplet": true,
+    "movie_submit_id": 395,
+    "movie_retire_id": 459,
+    "queued_before_movie_retirement": true,
+    "job_time_us": 25064608,
+    "movie_retire_time_us": 25065665
+  },
+  {
+    "job_event": 431,
+    "job": "0x1e255860",
+    "job_dimensions": [
+      1040,
+      620
+    ],
+    "frame_index": 1,
+    "requested_output_index": 0,
+    "job_output_planes": [
+      "0x1fb28900",
+      "0x1fd28a00",
+      "0x1fda8b00"
+    ],
+    "bind_ids": [
+      322,
+      323,
+      324
+    ],
+    "bound_planes": [
+      "0x1fb28900",
+      "0x1fd28a00",
+      "0x1fda8b00"
+    ],
+    "same_plane_triplet": true,
+    "movie_submit_id": 395,
+    "movie_retire_id": 459,
+    "queued_before_movie_retirement": true,
+    "job_time_us": 25064610,
+    "movie_retire_time_us": 25065665
+  },
+  {
+    "job_event": 758,
+    "job": "0x1e255860",
+    "job_dimensions": [
+      1040,
+      620
+    ],
+    "frame_index": 0,
+    "requested_output_index": 1,
+    "job_output_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "bind_ids": [
+      653,
+      654,
+      655
+    ],
+    "bound_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "same_plane_triplet": true,
+    "movie_submit_id": 726,
+    "movie_retire_id": 790,
+    "queued_before_movie_retirement": true,
+    "job_time_us": 25097930,
+    "movie_retire_time_us": 25099106
+  },
+  {
+    "job_event": 762,
+    "job": "0x1e255860",
+    "job_dimensions": [
+      1040,
+      620
+    ],
+    "frame_index": 0,
+    "requested_output_index": 1,
+    "job_output_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "bind_ids": [
+      653,
+      654,
+      655
+    ],
+    "bound_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "same_plane_triplet": true,
+    "movie_submit_id": 726,
+    "movie_retire_id": 790,
+    "queued_before_movie_retirement": true,
+    "job_time_us": 25097933,
+    "movie_retire_time_us": 25099106
+  },
+  {
+    "job_event": 1075,
+    "job": "0x1e255860",
+    "job_dimensions": [
+      1040,
+      620
+    ],
+    "frame_index": 1,
+    "requested_output_index": 0,
+    "job_output_planes": [
+      "0x1fb28900",
+      "0x1fd28a00",
+      "0x1fda8b00"
+    ],
+    "bind_ids": [
+      970,
+      971,
+      972
+    ],
+    "bound_planes": [
+      "0x1fb28900",
+      "0x1fd28a00",
+      "0x1fda8b00"
+    ],
+    "same_plane_triplet": true,
+    "movie_submit_id": 1043,
+    "movie_retire_id": 1117,
+    "queued_before_movie_retirement": true,
+    "job_time_us": 25131125,
+    "movie_retire_time_us": 25132257
+  },
+  {
+    "job_event": 1079,
+    "job": "0x1e255860",
+    "job_dimensions": [
+      1040,
+      620
+    ],
+    "frame_index": 1,
+    "requested_output_index": 0,
+    "job_output_planes": [
+      "0x1fb28900",
+      "0x1fd28a00",
+      "0x1fda8b00"
+    ],
+    "bind_ids": [
+      970,
+      971,
+      972
+    ],
+    "bound_planes": [
+      "0x1fb28900",
+      "0x1fd28a00",
+      "0x1fda8b00"
+    ],
+    "same_plane_triplet": true,
+    "movie_submit_id": 1043,
+    "movie_retire_id": 1117,
+    "queued_before_movie_retirement": true,
+    "job_time_us": 25131127,
+    "movie_retire_time_us": 25132257
+  },
+  {
+    "job_event": 1406,
+    "job": "0x1e255860",
+    "job_dimensions": [
+      1040,
+      620
+    ],
+    "frame_index": 0,
+    "requested_output_index": 1,
+    "job_output_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "bind_ids": [
+      1301,
+      1302,
+      1303
+    ],
+    "bound_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "same_plane_triplet": true,
+    "movie_submit_id": 1374,
+    "movie_retire_id": 1438,
+    "queued_before_movie_retirement": true,
+    "job_time_us": 25164394,
+    "movie_retire_time_us": 25165329
+  },
+  {
+    "job_event": 1410,
+    "job": "0x1e255860",
+    "job_dimensions": [
+      1040,
+      620
+    ],
+    "frame_index": 0,
+    "requested_output_index": 1,
+    "job_output_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "bind_ids": [
+      1301,
+      1302,
+      1303
+    ],
+    "bound_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "same_plane_triplet": true,
+    "movie_submit_id": 1374,
+    "movie_retire_id": 1438,
+    "queued_before_movie_retirement": true,
+    "job_time_us": 25164397,
+    "movie_retire_time_us": 25165329
+  },
+  {
+    "job_event": 1727,
+    "job": "0x1e255860",
+    "job_dimensions": [
+      1040,
+      620
+    ],
+    "frame_index": 1,
+    "requested_output_index": 0,
+    "job_output_planes": [
+      "0x1fb28900",
+      "0x1fd28a00",
+      "0x1fda8b00"
+    ],
+    "bind_ids": [
+      1622,
+      1623,
+      1624
+    ],
+    "bound_planes": [
+      "0x1fb28900",
+      "0x1fd28a00",
+      "0x1fda8b00"
+    ],
+    "same_plane_triplet": true,
+    "movie_submit_id": 1695,
+    "movie_retire_id": 1759,
+    "queued_before_movie_retirement": true,
+    "job_time_us": 25197784,
+    "movie_retire_time_us": 25198859
+  },
+  {
+    "job_event": 1731,
+    "job": "0x1e255860",
+    "job_dimensions": [
+      1040,
+      620
+    ],
+    "frame_index": 1,
+    "requested_output_index": 0,
+    "job_output_planes": [
+      "0x1fb28900",
+      "0x1fd28a00",
+      "0x1fda8b00"
+    ],
+    "bind_ids": [
+      1622,
+      1623,
+      1624
+    ],
+    "bound_planes": [
+      "0x1fb28900",
+      "0x1fd28a00",
+      "0x1fda8b00"
+    ],
+    "same_plane_triplet": true,
+    "movie_submit_id": 1695,
+    "movie_retire_id": 1759,
+    "queued_before_movie_retirement": true,
+    "job_time_us": 25197787,
+    "movie_retire_time_us": 25198859
+  },
+  {
+    "job_event": 2066,
+    "job": "0x1e255860",
+    "job_dimensions": [
+      1040,
+      620
+    ],
+    "frame_index": 0,
+    "requested_output_index": 1,
+    "job_output_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "bind_ids": [
+      1961,
+      1962,
+      1963
+    ],
+    "bound_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "same_plane_triplet": true,
+    "movie_submit_id": 2034,
+    "movie_retire_id": 2098,
+    "queued_before_movie_retirement": true,
+    "job_time_us": 25230923,
+    "movie_retire_time_us": 25231874
+  },
+  {
+    "job_event": 2070,
+    "job": "0x1e255860",
+    "job_dimensions": [
+      1040,
+      620
+    ],
+    "frame_index": 0,
+    "requested_output_index": 1,
+    "job_output_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "bind_ids": [
+      1961,
+      1962,
+      1963
+    ],
+    "bound_planes": [
+      "0x1fe28c00",
+      "0x20028d00",
+      "0x200a8e00"
+    ],
+    "same_plane_triplet": true,
+    "movie_submit_id": 2034,
+    "movie_retire_id": 2098,
+    "queued_before_movie_retirement": true,
+    "job_time_us": 25230925,
+    "movie_retire_time_us": 25231874
+  }
+]

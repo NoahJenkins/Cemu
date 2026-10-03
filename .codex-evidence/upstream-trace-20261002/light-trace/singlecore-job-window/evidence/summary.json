@@ -1,0 +1,312 @@
+{
+  "counts": {
+    "bind": 24,
+    "mutex-lock-enter": 533,
+    "mutex-lock-exit": 533,
+    "mutex-unlock-enter": 596,
+    "mutex-unlock-exit": 596,
+    "draw-done": 16,
+    "submit": 32,
+    "wait-enter": 16,
+    "retire": 30,
+    "wait-exit": 16,
+    "upload": 19,
+    "draw": 22
+  },
+  "dropped": 0,
+  "uploads": 19,
+  "input_vs_decoded_changes": 0,
+  "decoded_vs_after_changes": 1,
+  "matched_waits": 16,
+  "early_wait_ids": [],
+  "command_associations": [
+    {
+      "bind_id": 1,
+      "command_address": "0x15d4072c",
+      "is_display_list": true,
+      "submit_id": 74,
+      "timestamp": 2014,
+      "retire_id": 136,
+      "wait_exit_ids_before_this_submission": [
+        20,
+        41
+      ]
+    },
+    {
+      "bind_id": 2,
+      "command_address": "0x15d40750",
+      "is_display_list": true,
+      "submit_id": 74,
+      "timestamp": 2014,
+      "retire_id": 136,
+      "wait_exit_ids_before_this_submission": [
+        20,
+        41
+      ]
+    },
+    {
+      "bind_id": 3,
+      "command_address": "0x15d40774",
+      "is_display_list": true,
+      "submit_id": 74,
+      "timestamp": 2014,
+      "retire_id": 136,
+      "wait_exit_ids_before_this_submission": [
+        20,
+        41
+      ]
+    },
+    {
+      "bind_id": 330,
+      "command_address": "0x1594070c",
+      "is_display_list": true,
+      "submit_id": 403,
+      "timestamp": 2018,
+      "retire_id": 467,
+      "wait_exit_ids_before_this_submission": [
+        349,
+        370
+      ]
+    },
+    {
+      "bind_id": 331,
+      "command_address": "0x15940730",
+      "is_display_list": true,
+      "submit_id": 403,
+      "timestamp": 2018,
+      "retire_id": 467,
+      "wait_exit_ids_before_this_submission": [
+        349,
+        370
+      ]
+    },
+    {
+      "bind_id": 332,
+      "command_address": "0x15940754",
+      "is_display_list": true,
+      "submit_id": 403,
+      "timestamp": 2018,
+      "retire_id": 467,
+      "wait_exit_ids_before_this_submission": [
+        349,
+        370
+      ]
+    },
+    {
+      "bind_id": 651,
+      "command_address": "0x15d4072c",
+      "is_display_list": true,
+      "submit_id": 724,
+      "timestamp": 2022,
+      "retire_id": 788,
+      "wait_exit_ids_before_this_submission": [
+        670,
+        691
+      ]
+    },
+    {
+      "bind_id": 652,
+      "command_address": "0x15d40750",
+      "is_display_list": true,
+      "submit_id": 724,
+      "timestamp": 2022,
+      "retire_id": 788,
+      "wait_exit_ids_before_this_submission": [
+        670,
+        691
+      ]
+    },
+    {
+      "bind_id": 653,
+      "command_address": "0x15d40774",
+      "is_display_list": true,
+      "submit_id": 724,
+      "timestamp": 2022,
+      "retire_id": 788,
+      "wait_exit_ids_before_this_submission": [
+        670,
+        691
+      ]
+    },
+    {
+      "bind_id": 990,
+      "command_address": "0x1594070c",
+      "is_display_list": true,
+      "submit_id": 1063,
+      "timestamp": 2026,
+      "retire_id": 1127,
+      "wait_exit_ids_before_this_submission": [
+        1009,
+        1030
+      ]
+    },
+    {
+      "bind_id": 991,
+      "command_address": "0x15940730",
+      "is_display_list": true,
+      "submit_id": 1063,
+      "timestamp": 2026,
+      "retire_id": 1127,
+      "wait_exit_ids_before_this_submission": [
+        1009,
+        1030
+      ]
+    },
+    {
+      "bind_id": 992,
+      "command_address": "0x15940754",
+      "is_display_list": true,
+      "submit_id": 1063,
+      "timestamp": 2026,
+      "retire_id": 1127,
+      "wait_exit_ids_before_this_submission": [
+        1009,
+        1030
+      ]
+    },
+    {
+      "bind_id": 1311,
+      "command_address": "0x15d4072c",
+      "is_display_list": true,
+      "submit_id": 1384,
+      "timestamp": 2030,
+      "retire_id": 1452,
+      "wait_exit_ids_before_this_submission": [
+        1330,
+        1351
+      ]
+    },
+    {
+      "bind_id": 1312,
+      "command_address": "0x15d40750",
+      "is_display_list": true,
+      "submit_id": 1384,
+      "timestamp": 2030,
+      "retire_id": 1452,
+      "wait_exit_ids_before_this_submission": [
+        1330,
+        1351
+      ]
+    },
+    {
+      "bind_id": 1313,
+      "command_address": "0x15d40774",
+      "is_display_list": true,
+      "submit_id": 1384,
+      "timestamp": 2030,
+      "retire_id": 1452,
+      "wait_exit_ids_before_this_submission": [
+        1330,
+        1351
+      ]
+    },
+    {
+      "bind_id": 1642,
+      "command_address": "0x1594070c",
+      "is_display_list": true,
+      "submit_id": 1715,
+      "timestamp": 2034,
+      "retire_id": 1779,
+      "wait_exit_ids_before_this_submission": [
+        1661,
+        1682
+      ]
+    },
+    {
+      "bind_id": 1643,
+      "command_address": "0x15940730",
+      "is_display_list": true,
+      "submit_id": 1715,
+      "timestamp": 2034,
+      "retire_id": 1779,
+      "wait_exit_ids_before_this_submission": [
+        1661,
+        1682
+      ]
+    },
+    {
+      "bind_id": 1644,
+      "command_address": "0x15940754",
+      "is_display_list": true,
+      "submit_id": 1715,
+      "timestamp": 2034,
+      "retire_id": 1779,
+      "wait_exit_ids_before_this_submission": [
+        1661,
+        1682
+      ]
+    },
+    {
+      "bind_id": 1971,
+      "command_address": "0x15d4072c",
+      "is_display_list": true,
+      "submit_id": 2044,
+      "timestamp": 2038,
+      "retire_id": 2106,
+      "wait_exit_ids_before_this_submission": [
+        1990,
+        2011
+      ]
+    },
+    {
+      "bind_id": 1972,
+      "command_address": "0x15d40750",
+      "is_display_list": true,
+      "submit_id": 2044,
+      "timestamp": 2038,
+      "retire_id": 2106,
+      "wait_exit_ids_before_this_submission": [
+        1990,
+        2011
+      ]
+    },
+    {
+      "bind_id": 1973,
+      "command_address": "0x15d40774",
+      "is_display_list": true,
+      "submit_id": 2044,
+      "timestamp": 2038,
+      "retire_id": 2106,
+      "wait_exit_ids_before_this_submission": [
+        1990,
+        2011
+      ]
+    },
+    {
+      "bind_id": 2300,
+      "command_address": "0x1594070c",
+      "is_display_list": true,
+      "submit_id": 2373,
+      "timestamp": 2042,
+      "retire_id": null,
+      "wait_exit_ids_before_this_submission": [
+        2319,
+        2340
+      ]
+    },
+    {
+      "bind_id": 2301,
+      "command_address": "0x15940730",
+      "is_display_list": true,
+      "submit_id": 2373,
+      "timestamp": 2042,
+      "retire_id": null,
+      "wait_exit_ids_before_this_submission": [
+        2319,
+        2340
+      ]
+    },
+    {
+      "bind_id": 2302,
+      "command_address": "0x15940754",
+      "is_display_list": true,
+      "submit_id": 2373,
+      "timestamp": 2042,
+      "retire_id": null,
+      "wait_exit_ids_before_this_submission": [
+        2319,
+        2340
+      ]
+    }
+  ]
+}

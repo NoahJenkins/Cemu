@@ -1,0 +1,79 @@
+[
+  {
+    "guest_import": "0xe00950",
+    "opcode": "0x400001d",
+    "index": 29,
+    "native_target": "0x555555bb3820",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSSetThreadSpecific, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0062c",
+    "opcode": "0x400015e",
+    "index": 350,
+    "native_target": "0x555555b9d3e0",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSLockMutex, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00974",
+    "opcode": "0x4000160",
+    "index": 352,
+    "native_target": "0x555555b9d640",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSUnlockMutex, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0096c",
+    "opcode": "0x400015f",
+    "index": 351,
+    "native_target": "0x555555b9d510",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSTryLockMutex, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe0060c",
+    "opcode": "0x400015c",
+    "index": 348,
+    "native_target": "0x555555b9bb70",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSInitMutex, coreinit::InitializeConcurrency()::StringWrapper, (LogType)3>(PPCInterpreter_t*) [clone .llvm.8411805016109857354] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe003ac",
+    "opcode": "0x40000ae",
+    "index": 174,
+    "native_target": "0x555555d34470",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSAddAtomic64, coreinit::InitializeAtomic()::StringWrapper, (LogType)62>(PPCInterpreter_t*) [clone .llvm.16958967408256168270] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00628",
+    "opcode": "0x4000023",
+    "index": 35,
+    "native_target": "0x555555bb7600",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSJoinThread, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe004c4",
+    "opcode": "0x4000019",
+    "index": 25,
+    "native_target": "0x555555bb1160",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSCreateThread, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe00640",
+    "opcode": "0x4000024",
+    "index": 36,
+    "native_target": "0x555555bb83d0",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSResumeThread, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe005e8",
+    "opcode": "0x400001c",
+    "index": 28,
+    "native_target": "0x555555bb36a0",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSGetCurrentThread, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  },
+  {
+    "guest_import": "0xe005f4",
+    "opcode": "0x400002f",
+    "index": 47,
+    "native_target": "0x555555bbbe70",
+    "native_symbol": "void cafeExportCallWrapper<&coreinit::OSGetThreadPriority, coreinit::MapThreadExports()::StringWrapper, (LogType)16>(PPCInterpreter_t*) [clone .llvm.4025441786243181689] in section .text of /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff"
+  }
+]

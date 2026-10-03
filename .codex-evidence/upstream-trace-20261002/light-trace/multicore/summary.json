@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "bind": 1755,
+    "draw-done": 1170,
+    "submit": 3400,
+    "wait-enter": 1171,
+    "retire": 3400,
+    "wait-exit": 1171,
+    "upload": 1424,
+    "draw": 1761
+  },
+  "dropped": 0,
+  "uploads": 1424,
+  "input_vs_decoded_changes": 242,
+  "decoded_vs_after_changes": 592,
+  "matched_waits": 1171,
+  "early_wait_ids": []
+}

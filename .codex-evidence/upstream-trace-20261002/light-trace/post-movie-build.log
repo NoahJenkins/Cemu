@@ -1,0 +1,20 @@
+[1/11] Building CXX object src/Cafe/CMakeFiles/CemuCafe.dir/HW/Latte/Core/LatteTextureLegacy.cpp.o
+[2/11] Building CXX object src/Cafe/CMakeFiles/CemuCafe.dir/HW/Latte/Core/LatteCommandProcessor.cpp.o
+[3/11] Building CXX object src/Cafe/CMakeFiles/CemuCafe.dir/HW/Latte/Core/LatteTextureLoader.cpp.o
+[4/11] Building CXX object src/Cafe/CMakeFiles/CemuCafe.dir/HW/Espresso/Recompiler/PPCRecompiler.cpp.o
+In file included from /work/src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.cpp:3:
+In file included from /work/src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.h:37:
+/work/src/Cafe/../Cafe/HW/Espresso/Recompiler/IML/IMLInstruction.h:761:21: warning: implicit conversion from 'int' to 'uint8' (aka 'unsigned char') changes value from -999 to 25 [-Wconstant-conversion]
+                this->operation = -999;
+                                ~ ^~~~
+/work/src/Cafe/../Cafe/HW/Espresso/Recompiler/IML/IMLInstruction.h:810:21: warning: implicit conversion from 'int' to 'uint8' (aka 'unsigned char') changes value from -999 to 25 [-Wconstant-conversion]
+                this->operation = -999;
+                                ~ ^~~~
+2 warnings generated.
+[5/11] Building CXX object src/Cafe/CMakeFiles/CemuCafe.dir/OS/libs/gx2/GX2_Command.cpp.o
+[6/11] Building CXX object src/Cafe/CMakeFiles/CemuCafe.dir/OS/libs/coreinit/coreinit_Memory.cpp.o
+[7/11] Building CXX object src/Cafe/CMakeFiles/CemuCafe.dir/OS/libs/coreinit/coreinit_Synchronization.cpp.o
+[8/11] Building CXX object src/Cafe/CMakeFiles/CemuCafe.dir/OS/libs/gx2/GX2_Event.cpp.o
+[9/11] Building CXX object src/Cafe/CMakeFiles/CemuCafe.dir/OS/libs/gx2/GX2_Texture.cpp.o
+[10/11] Linking CXX static library src/Cafe/libCemuCafe.a
+[11/11] Linking CXX executable ../bin/Cemu_release

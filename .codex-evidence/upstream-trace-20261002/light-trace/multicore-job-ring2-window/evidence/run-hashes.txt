@@ -1,0 +1,2 @@
+c8b2e5d8c31357db1fad21d6c527eb102fe822be660fbb8b69e89c6ae0407724  /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_job_ring2_window_trace_0a2b6ff
+3a2438ea7505de685dd0cc9756e308e30164f6df730acaf06ba80e1337856524  /home/deck/CemuSwapForceTest/upstream-0a2b6ff-multicore-job-ring2-window-20261002/xdg/config/Cemu/gameProfiles/0005000010139200.ini

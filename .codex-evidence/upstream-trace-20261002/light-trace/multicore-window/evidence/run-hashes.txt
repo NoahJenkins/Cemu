@@ -1,0 +1,2 @@
+7e1dd69a0e3dc2a037453fbe72c169928d378557c7c57ca8bf3a46c430a12b0d  /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_window_trace_0a2b6ff
+3a2438ea7505de685dd0cc9756e308e30164f6df730acaf06ba80e1337856524  /home/deck/CemuSwapForceTest/upstream-0a2b6ff-multicore-window-20261002/xdg/config/Cemu/gameProfiles/0005000010139200.ini

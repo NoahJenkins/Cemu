@@ -1,0 +1,352 @@
+[
+  {
+    "variant": "control-before",
+    "config": {
+      "variant": "control-before",
+      "switches": {},
+      "trace": false,
+      "cpu_mode": 3,
+      "capture_fps": 24,
+      "duration": 50
+    },
+    "binary_sha256": "97eadd91661763520780e4376b5161aad4a8e3a7a6cc703b811f711091ba3589",
+    "events": []
+  },
+  {
+    "variant": "delay2000",
+    "config": {
+      "variant": "delay2000",
+      "switches": {
+        "CEMU_SWAPFORCE_POST_MOVIE_DELAY_US": "2000"
+      },
+      "trace": false,
+      "cpu_mode": 3,
+      "capture_fps": 24,
+      "duration": 50
+    },
+    "binary_sha256": "97eadd91661763520780e4376b5161aad4a8e3a7a6cc703b811f711091ba3589",
+    "events": [
+      {
+        "count": 1,
+        "timestamp": 574,
+        "delay_us": 2000,
+        "elapsed_us": 2077,
+        "completed": false,
+        "total_us": 2077,
+        "incomplete": 1
+      },
+      {
+        "count": 120,
+        "timestamp": 1050,
+        "delay_us": 2000,
+        "elapsed_us": 2058,
+        "completed": true,
+        "total_us": 249556,
+        "incomplete": 1
+      },
+      {
+        "count": 240,
+        "timestamp": 1530,
+        "delay_us": 2000,
+        "elapsed_us": 2066,
+        "completed": true,
+        "total_us": 498810,
+        "incomplete": 1
+      },
+      {
+        "count": 360,
+        "timestamp": 2006,
+        "delay_us": 2000,
+        "elapsed_us": 2081,
+        "completed": true,
+        "total_us": 748822,
+        "incomplete": 1
+      },
+      {
+        "count": 480,
+        "timestamp": 2486,
+        "delay_us": 2000,
+        "elapsed_us": 2074,
+        "completed": true,
+        "total_us": 998844,
+        "incomplete": 1
+      },
+      {
+        "count": 600,
+        "timestamp": 2942,
+        "delay_us": 2000,
+        "elapsed_us": 2088,
+        "completed": false,
+        "total_us": 1248037,
+        "incomplete": 7
+      },
+      {
+        "count": 720,
+        "timestamp": 3182,
+        "delay_us": 2000,
+        "elapsed_us": 2075,
+        "completed": true,
+        "total_us": 1497117,
+        "incomplete": 21
+      },
+      {
+        "count": 840,
+        "timestamp": 3422,
+        "delay_us": 2000,
+        "elapsed_us": 2073,
+        "completed": true,
+        "total_us": 1746619,
+        "incomplete": 24
+      },
+      {
+        "count": 960,
+        "timestamp": 3662,
+        "delay_us": 2000,
+        "elapsed_us": 2091,
+        "completed": true,
+        "total_us": 1996269,
+        "incomplete": 27
+      },
+      {
+        "count": 1080,
+        "timestamp": 3902,
+        "delay_us": 2000,
+        "elapsed_us": 2072,
+        "completed": true,
+        "total_us": 2246561,
+        "incomplete": 29
+      }
+    ],
+    "first480_mean_us": 2080.925,
+    "first480_pending_on_return": 1
+  },
+  {
+    "variant": "retirement",
+    "config": {
+      "variant": "retirement",
+      "switches": {
+        "CEMU_SWAPFORCE_POST_MOVIE_SUBMIT_WAIT": "1"
+      },
+      "trace": false,
+      "cpu_mode": 3,
+      "capture_fps": 24,
+      "duration": 50
+    },
+    "binary_sha256": "97eadd91661763520780e4376b5161aad4a8e3a7a6cc703b811f711091ba3589",
+    "events": [
+      {
+        "count": 1,
+        "timestamp": 570,
+        "delay_us": 0,
+        "elapsed_us": 3773,
+        "completed": true,
+        "total_us": 3773,
+        "incomplete": 0
+      },
+      {
+        "count": 120,
+        "timestamp": 1046,
+        "delay_us": 0,
+        "elapsed_us": 1168,
+        "completed": true,
+        "total_us": 134057,
+        "incomplete": 0
+      },
+      {
+        "count": 240,
+        "timestamp": 1526,
+        "delay_us": 0,
+        "elapsed_us": 841,
+        "completed": true,
+        "total_us": 256594,
+        "incomplete": 0
+      },
+      {
+        "count": 360,
+        "timestamp": 2002,
+        "delay_us": 0,
+        "elapsed_us": 967,
+        "completed": true,
+        "total_us": 357883,
+        "incomplete": 0
+      },
+      {
+        "count": 480,
+        "timestamp": 2482,
+        "delay_us": 0,
+        "elapsed_us": 958,
+        "completed": true,
+        "total_us": 485299,
+        "incomplete": 0
+      },
+      {
+        "count": 600,
+        "timestamp": 2932,
+        "delay_us": 0,
+        "elapsed_us": 1667,
+        "completed": true,
+        "total_us": 774522,
+        "incomplete": 0
+      },
+      {
+        "count": 720,
+        "timestamp": 3172,
+        "delay_us": 0,
+        "elapsed_us": 1482,
+        "completed": true,
+        "total_us": 996121,
+        "incomplete": 0
+      },
+      {
+        "count": 840,
+        "timestamp": 3412,
+        "delay_us": 0,
+        "elapsed_us": 1481,
+        "completed": true,
+        "total_us": 1189463,
+        "incomplete": 0
+      },
+      {
+        "count": 960,
+        "timestamp": 3652,
+        "delay_us": 0,
+        "elapsed_us": 1497,
+        "completed": true,
+        "total_us": 1380910,
+        "incomplete": 0
+      },
+      {
+        "count": 1080,
+        "timestamp": 3892,
+        "delay_us": 0,
+        "elapsed_us": 1390,
+        "completed": true,
+        "total_us": 1568729,
+        "incomplete": 0
+      }
+    ],
+    "first480_mean_us": 1011.0395833333333,
+    "first480_pending_on_return": 0
+  },
+  {
+    "variant": "delay1000",
+    "config": {
+      "variant": "delay1000",
+      "switches": {
+        "CEMU_SWAPFORCE_POST_MOVIE_DELAY_US": "1000"
+      },
+      "trace": false,
+      "cpu_mode": 3,
+      "capture_fps": 24,
+      "duration": 50
+    },
+    "binary_sha256": "97eadd91661763520780e4376b5161aad4a8e3a7a6cc703b811f711091ba3589",
+    "events": [
+      {
+        "count": 1,
+        "timestamp": 580,
+        "delay_us": 1000,
+        "elapsed_us": 1090,
+        "completed": false,
+        "total_us": 1090,
+        "incomplete": 1
+      },
+      {
+        "count": 120,
+        "timestamp": 1056,
+        "delay_us": 1000,
+        "elapsed_us": 1084,
+        "completed": true,
+        "total_us": 128909,
+        "incomplete": 43
+      },
+      {
+        "count": 240,
+        "timestamp": 1536,
+        "delay_us": 1000,
+        "elapsed_us": 1059,
+        "completed": true,
+        "total_us": 257507,
+        "incomplete": 58
+      },
+      {
+        "count": 360,
+        "timestamp": 2012,
+        "delay_us": 1000,
+        "elapsed_us": 1074,
+        "completed": true,
+        "total_us": 386084,
+        "incomplete": 68
+      },
+      {
+        "count": 480,
+        "timestamp": 2492,
+        "delay_us": 1000,
+        "elapsed_us": 1067,
+        "completed": true,
+        "total_us": 515026,
+        "incomplete": 84
+      },
+      {
+        "count": 600,
+        "timestamp": 2948,
+        "delay_us": 1000,
+        "elapsed_us": 1075,
+        "completed": false,
+        "total_us": 645753,
+        "incomplete": 111
+      },
+      {
+        "count": 720,
+        "timestamp": 3188,
+        "delay_us": 1000,
+        "elapsed_us": 1071,
+        "completed": false,
+        "total_us": 777305,
+        "incomplete": 231
+      },
+      {
+        "count": 840,
+        "timestamp": 3428,
+        "delay_us": 1000,
+        "elapsed_us": 1075,
+        "completed": false,
+        "total_us": 906043,
+        "incomplete": 351
+      },
+      {
+        "count": 960,
+        "timestamp": 3668,
+        "delay_us": 1000,
+        "elapsed_us": 1061,
+        "completed": false,
+        "total_us": 1034480,
+        "incomplete": 471
+      },
+      {
+        "count": 1080,
+        "timestamp": 3908,
+        "delay_us": 1000,
+        "elapsed_us": 1073,
+        "completed": false,
+        "total_us": 1163279,
+        "incomplete": 591
+      }
+    ],
+    "first480_mean_us": 1072.9708333333333,
+    "first480_pending_on_return": 84
+  },
+  {
+    "variant": "control-after",
+    "config": {
+      "variant": "control-after",
+      "switches": {},
+      "trace": false,
+      "cpu_mode": 3,
+      "capture_fps": 24,
+      "duration": 50
+    },
+    "binary_sha256": "97eadd91661763520780e4376b5161aad4a8e3a7a6cc703b811f711091ba3589",
+    "events": []
+  }
+]

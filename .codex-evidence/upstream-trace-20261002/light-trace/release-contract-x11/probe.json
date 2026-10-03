@@ -1,0 +1,22 @@
+{
+  "unmodified_executable": true,
+  "stop": "first matching luma binding",
+  "texture_width": 2048,
+  "texture_height": 1024,
+  "code_ranges": [
+    {
+      "base": "0x2a80000",
+      "size": 24576
+    },
+    {
+      "base": "0x2950000",
+      "size": 32768
+    },
+    {
+      "base": "0x280b000",
+      "size": 8192
+    }
+  ],
+  "imports": 410,
+  "timing_evidence": false
+}

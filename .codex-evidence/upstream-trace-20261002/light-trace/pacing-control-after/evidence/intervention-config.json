@@ -1,0 +1,8 @@
+{
+  "variant": "control-after",
+  "switches": {},
+  "trace": false,
+  "cpu_mode": 3,
+  "capture_fps": 24,
+  "duration": 50
+}

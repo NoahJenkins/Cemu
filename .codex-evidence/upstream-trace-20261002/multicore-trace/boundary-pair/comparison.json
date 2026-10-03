@@ -1,0 +1,221 @@
+{
+  "bind_events": [
+    {
+      "id": 3602,
+      "us": 26412675,
+      "kind": "bind",
+      "frame": 720,
+      "draw": 3306,
+      "phys": 531794176,
+      "width": 2048,
+      "height": 1024,
+      "pitch": 2048,
+      "texture": 0,
+      "reload": 0,
+      "unit": 0,
+      "stage": 57344,
+      "core": 0,
+      "lr": 43331428,
+      "before": 2097152,
+      "decoded": 0,
+      "after": 2097152,
+      "dropped": 0
+    },
+    {
+      "id": 3603,
+      "us": 26413506,
+      "kind": "bind",
+      "frame": 720,
+      "draw": 3306,
+      "phys": 533891584,
+      "width": 1024,
+      "height": 512,
+      "pitch": 1024,
+      "texture": 0,
+      "reload": 0,
+      "unit": 1,
+      "stage": 57344,
+      "core": 0,
+      "lr": 43331428,
+      "before": 524288,
+      "decoded": 0,
+      "after": 524288,
+      "dropped": 0
+    },
+    {
+      "id": 3604,
+      "us": 26413705,
+      "kind": "bind",
+      "frame": 720,
+      "draw": 3306,
+      "phys": 534416128,
+      "width": 1024,
+      "height": 512,
+      "pitch": 1024,
+      "texture": 0,
+      "reload": 0,
+      "unit": 2,
+      "stage": 57344,
+      "core": 0,
+      "lr": 43331428,
+      "before": 524288,
+      "decoded": 0,
+      "after": 524288,
+      "dropped": 0
+    }
+  ],
+  "upload_events": [
+    {
+      "id": 3605,
+      "us": 26414552,
+      "kind": "upload",
+      "frame": 720,
+      "draw": 3306,
+      "phys": 531794176,
+      "width": 2048,
+      "height": 1024,
+      "pitch": 2048,
+      "texture": 140597567128880,
+      "reload": 186,
+      "unit": 0,
+      "stage": 0,
+      "core": 0,
+      "lr": 0,
+      "before": 2097152,
+      "decoded": 2097152,
+      "after": 2097152,
+      "dropped": 0
+    },
+    {
+      "id": 3607,
+      "us": 26416838,
+      "kind": "upload",
+      "frame": 720,
+      "draw": 3306,
+      "phys": 533891584,
+      "width": 1024,
+      "height": 512,
+      "pitch": 1024,
+      "texture": 140597568018176,
+      "reload": 131,
+      "unit": 0,
+      "stage": 0,
+      "core": 0,
+      "lr": 0,
+      "before": 524288,
+      "decoded": 524288,
+      "after": 524288,
+      "dropped": 0
+    },
+    {
+      "id": 3609,
+      "us": 26417196,
+      "kind": "upload",
+      "frame": 720,
+      "draw": 3306,
+      "phys": 534416128,
+      "width": 1024,
+      "height": 512,
+      "pitch": 1024,
+      "texture": 140597567477744,
+      "reload": 136,
+      "unit": 0,
+      "stage": 0,
+      "core": 0,
+      "lr": 0,
+      "before": 524288,
+      "decoded": 524288,
+      "after": 524288,
+      "dropped": 0
+    }
+  ],
+  "planes": [
+    {
+      "unit": 0,
+      "phys": 531794176,
+      "sha256": {
+        "bind-before": "0d10833cedcee00ccf44f7c53175bffbf3f6e95286bbf18f1f4dc00ee11e4289",
+        "bind-after": "0d10833cedcee00ccf44f7c53175bffbf3f6e95286bbf18f1f4dc00ee11e4289",
+        "upload-before": "90293061b1be0c1db35e8114545bdcd3cf33da1cbf95817fb41daa3d5b3a52a8",
+        "actual-decoded": "4cd7449caeddafd2138a11d8d1fd4a36958c09665c2e9dca47e644b864724fb3",
+        "upload-after": "653e8cca6bc692af83ec3bc71c2774eda4b2a98f7a318d30f62feae7a77f157e"
+      },
+      "differences": {
+        "bind-before_vs_bind-after": {
+          "different_bytes": 0,
+          "different_rows": 0
+        },
+        "bind-before_vs_upload-before": {
+          "different_bytes": 32203,
+          "different_rows": 64
+        },
+        "upload-before_vs_actual-decoded": {
+          "different_bytes": 34957,
+          "different_rows": 72
+        },
+        "actual-decoded_vs_upload-after": {
+          "different_bytes": 54319,
+          "different_rows": 96
+        }
+      }
+    },
+    {
+      "unit": 1,
+      "phys": 533891584,
+      "sha256": {
+        "bind-before": "bb3d38ef4bb7882405133e11f96792acb495617fe0cf0c0eafed8535599f8a70",
+        "bind-after": "bb3d38ef4bb7882405133e11f96792acb495617fe0cf0c0eafed8535599f8a70",
+        "upload-before": "f53698a7a6e09c80f637adf17e9ccca91f8341581a5b36f3fb82ebad3c89fed1",
+        "actual-decoded": "f53698a7a6e09c80f637adf17e9ccca91f8341581a5b36f3fb82ebad3c89fed1",
+        "upload-after": "f53698a7a6e09c80f637adf17e9ccca91f8341581a5b36f3fb82ebad3c89fed1"
+      },
+      "differences": {
+        "bind-before_vs_bind-after": {
+          "different_bytes": 0,
+          "different_rows": 0
+        },
+        "bind-before_vs_upload-before": {
+          "different_bytes": 54601,
+          "different_rows": 312
+        },
+        "upload-before_vs_actual-decoded": {
+          "different_bytes": 0,
+          "different_rows": 0
+        },
+        "actual-decoded_vs_upload-after": {
+          "different_bytes": 0,
+          "different_rows": 0
+        }
+      }
+    },
+    {
+      "unit": 2,
+      "phys": 534416128,
+      "sha256": {
+        "bind-before": "69633d1f4a98d5f13c75bbea93280725b005e9e7cf073a8f445dedbd47273f8a",
+        "bind-after": "69633d1f4a98d5f13c75bbea93280725b005e9e7cf073a8f445dedbd47273f8a",
+        "upload-before": "f7b3d2351fdcb2dd08d12afbac0e99e1fbd128d843a49a96e36f31c606fb2cc9",
+        "actual-decoded": "f7b3d2351fdcb2dd08d12afbac0e99e1fbd128d843a49a96e36f31c606fb2cc9",
+        "upload-after": "f7b3d2351fdcb2dd08d12afbac0e99e1fbd128d843a49a96e36f31c606fb2cc9"
+      },
+      "differences": {
+        "bind-before_vs_bind-after": {
+          "different_bytes": 0,
+          "different_rows": 0
+        },
+        "bind-before_vs_upload-before": {
+          "different_bytes": 61078,
+          "different_rows": 312
+        },
+        "upload-before_vs_actual-decoded": {
+          "different_bytes": 0,
+          "different_rows": 0
+        },
+        "actual-decoded_vs_upload-after": {
+          "different_bytes": 0,
+          "different_rows": 0
+        }
+      }
+    }
+  ]
+}

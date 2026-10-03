@@ -73,3 +73,53 @@ On October 2, selecting a figure in Game Mode caused Xwayland `:1` to segfault, 
 Issue `https://github.com/cemu-project/Cemu/issues/1147` was open at the last check. A workaround PR should address only the supported video symptom and tested USA title; do not claim all icon corruption is fixed.
 
 Read current `CONTRIBUTING.md` before any submission. At the last check, Cemu required human-written and human-understood code from new contributors, with AI allowed for planning/review. Do not submit AI-authored code as human-written or evade that rule by paraphrasing. Clarify whether an AI-prepared configuration-only proposal is accepted. No upstream PR has been created. Submission remains a separate step from this investigation.
+
+## Local follow-up after b67ab9e — October 2
+
+Current-upstream reproduction and isolated diagnostics are retained locally in
+[upstream-trace-20261002/README.md](upstream-trace-20261002/README.md). This is
+the continuation record for this evidence branch. The checkpoint commit
+containing this note supersedes b67ab9e; use the current branch HEAD.
+
+The first observed mismatch is in guest planes before texture upload, and the
+actual decoded bytes are corrupt before Vulkan staging. A trace-disabled
+multicore test using the same executable shows corruption with a post-movie-list
+retirement wait disabled, clean reviewed frames with it enabled, and corruption
+again with it disabled. This supports a buffer reuse/consumption race, not a
+proven emulator contract fault or an upstream-ready fix.
+
+**Audit correction:** dense review found brief ghosts in unmodified upstream
+single-core video. Fresh isolated installed Cemu 2.6 Desktop X11 recordings
+also show ghosts in both CPU modes. Single-core is not a clean laboratory
+control, and tracing alone cannot be blamed for its artifacts. The user
+completed a level successfully with the preserved installed workaround.
+Read [upstream-trace-20261002/AUDIT.md](upstream-trace-20261002/AUDIT.md).
+
+Follow-up pacing tests are complete: fixed 1 ms and 2 ms delays also suppress
+ghosts in reviewed frames, with corrupt controls before and after. Over the
+first 480 identified submissions, the 1 ms delay averages 1,072.97 microseconds
+and returns before retirement 84 times; the retirement wait averages 1,011.04
+microseconds and has no early returns. This is similar aggregate cost, not
+exact per-submission matching. See [PACING.md](upstream-trace-20261002/PACING.md).
+
+Next: follow actual decoder completion and buffer release, check command
+lifetime, and inspect texture publication/cache semantics. The completed command checksum
+probe found no changes across the recorded 480 root and 960 nested executions,
+while ghosts remained visible. See [COMMAND-LIFETIME.md](upstream-trace-20261002/COMMAND-LIFETIME.md)
+for limits and exact next steps. Prioritize plane lifetime and texture
+publication/cache behavior. Do not infer a missing retirement operation from
+the pacing result. Do not repeat broad PSQ or barrier experiments. Inspect dense frames
+around scene transitions; sparse samples missed short corruption bursts.
+
+The installed single-core setup, live saves and figure, and older Deck source
+patch are preserved. Deck is back in Game Mode, with Magic Black's rendered
+full-screen overlay verified at opacity 1. No test process or build remains.
+The Xwayland crash remains separate. Cemu contribution policy was read; local
+AI-authored diagnostics are not an eligible upstream code contribution.
+
+## Break checkpoint
+
+The user requested that this checkpoint be committed and pushed to the evidence
+branch, then testing stop for a break. No test or background job is scheduled.
+Full local recordings and raw snapshots are retained outside the Git commit;
+see [EVIDENCE-STORAGE.md](upstream-trace-20261002/EVIDENCE-STORAGE.md).

@@ -1,0 +1,10 @@
+{
+  "variant": "retirement",
+  "switches": {
+    "CEMU_SWAPFORCE_POST_MOVIE_SUBMIT_WAIT": "1"
+  },
+  "trace": false,
+  "cpu_mode": 3,
+  "capture_fps": 24,
+  "duration": 50
+}

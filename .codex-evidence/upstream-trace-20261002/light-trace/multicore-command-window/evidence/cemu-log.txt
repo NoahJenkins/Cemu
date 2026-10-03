@@ -1,0 +1,77 @@
+[16:38:09.660] ------- Init Cemu 0a2b6ff -------
+[16:38:09.660] Init Wii U memory space (base: 0x00007fe824000000)
+[16:38:09.660] mlc01 path: /home/deck/CemuSwapForceTest/upstream-0a2b6ff-multicore-command-window-20261002/mlc01
+[16:38:09.660] CPU: AMD Custom APU 0932
+[16:38:09.660] RAM: 14804MB
+[16:38:09.660] Platform: Linux
+[16:38:09.660] Used CPU extensions: SSSE3, SSE4.1, AVX, AVX2, LZCNT, MOVBE, BMI2, AES-NI, INVARIANT-TSC
+[16:38:09.661] IOSU_CRYPTO: No otp.bin found. Online mode cannot be used
+[16:38:09.661] IOSU_CRYPTO: No Seeprom.bin found. Online mode cannot be used
+[16:38:09.781] Mounting title 0005000010139200
+[16:38:09.781] Base: /home/deck/Emulation/roms/wiiu/Skylanders - Swap Force (USA) (EnFrEsPt)/Skylanders - Swap Force (USA) (En,Fr,Es,Pt).wux [WUD]
+[16:38:09.782] Update: Not present
+[16:38:09.782] DLC: Not present
+[16:38:09.783] Shared font CafeCn.ttf is not present
+[16:38:09.792] Recompiler initialized
+[16:38:09.797] ------- Init Vulkan graphics backend -------
+[16:38:09.806] Vulkan instance version: 1.4
+[16:38:09.816] Using GPU: AMD Custom GPU 0932 (RADV VANGOGH)
+[16:38:09.816] Driver version: Mesa 26.2.0-devel (git-035ae2f854)
+[16:38:09.816] Vulkan: present_wait extension: supported
+[16:38:09.816] VulkanLimits: UBAlignment 4 nonCoherentAtomSize 64
+[16:38:09.817] Vulkan device memory info:
+[16:38:09.817] Heap 0 - Size 3072MB Flags 0x00000000
+[16:38:09.817] Heap 1 - Size 6144MB Flags 0x00000001
+[16:38:09.817] Memory 0 - HeapIndex 1 Flags 0x00000001
+[16:38:09.817] Memory 1 - HeapIndex 1 Flags 0x00000001
+[16:38:09.817] Memory 2 - HeapIndex 0 Flags 0x00000006
+[16:38:09.817] Memory 3 - HeapIndex 1 Flags 0x00000007
+[16:38:09.817] Memory 4 - HeapIndex 1 Flags 0x00000007
+[16:38:09.817] Memory 5 - HeapIndex 0 Flags 0x0000000e
+[16:38:09.817] Memory 6 - HeapIndex 0 Flags 0x0000000e
+[16:38:09.817] Memory 7 - HeapIndex 1 Flags 0x000000c1
+[16:38:09.817] Memory 8 - HeapIndex 0 Flags 0x000000c6
+[16:38:09.818] Memory 9 - HeapIndex 1 Flags 0x000000c7
+[16:38:09.818] Memory 10 - HeapIndex 0 Flags 0x000000ce
+[16:38:09.818] VK_FORMAT_D24_UNORM_S8_UINT not supported
+[16:38:09.818] VK_FORMAT_R4G4_UNORM_PACK8 not supported
+[16:38:09.828] Could not disable screen saver (SDL video subsystem initialization error: No available video device)
+[16:38:12.953] ------- Loaded title -------
+[16:38:12.953] TitleId: 00050000-10139200
+[16:38:12.953] TitleVersion: v0
+[16:38:12.953] TitleRegion: US
+[16:38:12.953] Save path:   /home/deck/CemuSwapForceTest/upstream-0a2b6ff-multicore-command-window-20261002/mlc01/usr/save/00050000/10139200/user/
+[16:38:12.954] Shader cache file: shaderCache/transferable/0005000010139200.bin
+[16:38:12.954] gameprofile path: gameProfiles/0005000010139200.ini
+[16:38:12.954] RPX hash (updated): 6cd668ab
+[16:38:12.954] RPX hash (base): 6cd668ab
+[16:38:13.051] Loaded module 'nova-cafe-fin' with checksum 0xb1f102ec
+[16:38:13.051] RPL link time: 98ms
+[16:38:13.140] HLE scan time: 89ms
+[16:38:13.140] ------- Active settings -------
+[16:38:13.140] CPU-Mode: Multi-core recompiler (gameprofile)
+[16:38:13.140] Load shared libraries: true
+[16:38:13.140] Use precompiled shaders: auto
+[16:38:13.140] Full sync at GX2DrawDone: false
+[16:38:13.140] Strict shader mul: true
+[16:38:13.140] Async compile: true
+[16:38:13.140] Console language: 1
+[16:38:13.385] ------- Activate graphic packs -------
+[16:38:13.385] Applying patch group 'SkylandersSwapForce_V0'
+[16:38:13.385] Activate graphic pack: Skylanders Swap Force/Workarounds/Portal Stability Fix
+[16:38:13.385] ------- Init Audio backend -------
+[16:38:13.385] DirectSound: not supported
+[16:38:13.385] XAudio 2.8: not supported
+[16:38:13.385] XAudio 2.7: not supported
+[16:38:13.385] Cubeb: available
+[16:38:13.385] ------- Init Audio input backend -------
+[16:38:13.385] Cubeb: available
+[16:38:13.385] ------- Run title -------
+[16:38:13.566] nsyshid::BackendLibusb: device not on whitelist: 28de:1205
+[16:38:13.566] nsyshid::BackendLibusb: device not on whitelist: 1d6b:0002
+[16:38:13.566] nsyshid::BackendLibusb: device not on whitelist: 0bda:8153
+[16:38:13.566] nsyshid::BackendLibusb: device not on whitelist: 05e3:0626
+[16:38:13.566] nsyshid::BackendLibusb: device not on whitelist: 1d6b:0003
+[16:38:13.566] nsyshid::BackendLibusb: device not on whitelist: 05e3:0610
+[16:38:13.566] nsyshid::BackendLibusb: device not on whitelist: 1d6b:0002
+[16:38:13.600] IOSU_ACT: using account default in first slot

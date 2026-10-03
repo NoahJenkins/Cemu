@@ -1,0 +1,378 @@
+diff --git a/src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.cpp b/src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.cpp
+index fae5127..6d032ae 100644
+--- a/src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.cpp
++++ b/src/Cafe/HW/Espresso/Recompiler/PPCRecompiler.cpp
+@@ -8,6 +8,7 @@
+ #include "config/LaunchSettings.h"
+ #include "Common/ExceptionHandler/ExceptionHandler.h"
+ #include "Common/cpu_features.h"
++#include "Cafe/HW/Latte/Core/SwapForceVideoTrace.h"
+ #include "util/helpers/fspinlock.h"
+ #include "util/helpers/helpers.h"
+ #include "util/MemMapper/MemMapper.h"
+@@ -256,6 +257,16 @@ PPCRecFunction_t* PPCRecompiler_recompileFunction(PPCFunctionBoundaryTracker::PP
+ 			delete fs;
+ 		}
+ 	}
++	if (std::getenv("CEMU_SWAPFORCE_TRACE_COMPILE"))
++	{
++		auto& trace = SwapForceVideoTrace::Get();
++		if (trace.Enabled())
++		{
++			auto e = trace.Begin("compile", ppcRecFunc->ppcAddress, ppcRecFunc->ppcSize, 0, 0,
++				reinterpret_cast<uintptr_t>(ppcRecFunc->x86Code));
++			e.value = ppcRecFunc->x86Size; trace.Submit(std::move(e));
++		}
++	}
+ 
+ 	// collect list of PPC-->x64 entry points
+ 	entryPointsOut.clear();
+@@ -741,4 +752,4 @@ void PPCRecompiler_Disable()
+ {
+ 	if (s_ppcRecompilerState.initialized)
+ 		s_ppcRecompilerState.recompilerEnableCount--;
+-}
+\ No newline at end of file
++}
+diff --git a/src/Cafe/HW/Latte/Core/LatteCommandProcessor.cpp b/src/Cafe/HW/Latte/Core/LatteCommandProcessor.cpp
+index de67772..6d2b04a 100644
+--- a/src/Cafe/HW/Latte/Core/LatteCommandProcessor.cpp
++++ b/src/Cafe/HW/Latte/Core/LatteCommandProcessor.cpp
+@@ -15,6 +15,7 @@
+ #include "Cafe/OS/libs/TCL/TCL.h" // TCL currently handles the GPU command ringbuffer
+ 
+ #include "Cafe/CafeSystem.h"
++#include "SwapForceVideoTrace.h"
+ 
+ #include <boost/container/small_vector.hpp>
+ 
+@@ -47,6 +48,7 @@ public:
+ 	{
+ 		return m_drawPassActive;
+ 	}
++	SwapForceVideoTrace::Sink::CommandCheck sfCommandCheck;
+ 
+ 	void beginDrawPass()
+ 	{
+@@ -250,11 +252,13 @@ void LatteCP_itIndirectBufferDepr(LatteCMDPtr cmd, uint32 nWords)
+ 	{
+ 		DrawPassContext drawPassCtx;
+ 		uint32be* buf = MEMPTR<uint32be>(physicalAddress).GetPtr();
++		drawPassCtx.sfCommandCheck = SwapForceVideoTrace::Get().CommandEnter(buf, physicalAddress, sizeInU32s);
+ 		drawPassCtx.PushCurrentCommandQueuePos(buf, buf, buf + sizeInU32s);
+ 
+ 		LatteCP_processCommandBuffer(drawPassCtx);
+ 		if (drawPassCtx.isWithinDrawPass())
+ 			drawPassCtx.endDrawPass();
++		SwapForceVideoTrace::Get().CommandExit(drawPassCtx.sfCommandCheck, buf);
+ 	}
+ }
+ 
+@@ -267,6 +271,7 @@ void LatteCP_itIndirectBuffer(LatteCMDPtr cmd, uint32 nWords, DrawPassContext& d
+ 	uint32 sizeInDWords = LatteReadCMD();
+ 	if (sizeInDWords > 0)
+ 	{
++		if (drawPassCtx.sfCommandCheck.id) ++drawPassCtx.sfCommandCheck.nested;
+ 		uint32 displayListSize = sizeInDWords * 4;
+ 		uint32be* buf = MEMPTR<uint32be>(physicalAddress).GetPtr();
+ 		drawPassCtx.PushCurrentCommandQueuePos(buf, buf, buf + sizeInDWords);
+@@ -601,6 +606,8 @@ LatteCMDPtr LatteCP_itEventWriteEOP(LatteCMDPtr cmd, uint32 nWords)
+ 		stdx::atomic_ref<uint64be> atomicRef(*(uint64be*)memory_getPointerFromPhysicalOffset(word1));
+ 		uint64 val = ((uint64)word4 << 32) | word3;
+ 		atomicRef.store(val);
++		auto& trace = SwapForceVideoTrace::Get();
++		if (trace.Active()) { auto e = trace.Begin("retire", word1, 0, 0, 0); e.value = val; trace.Submit(std::move(e)); }
+ 	}
+ 	else
+ 	{	cemu_assert_unimplemented();
+diff --git a/src/Cafe/HW/Latte/Core/LatteTextureLegacy.cpp b/src/Cafe/HW/Latte/Core/LatteTextureLegacy.cpp
+index 7b8a0b7..971475e 100644
+--- a/src/Cafe/HW/Latte/Core/LatteTextureLegacy.cpp
++++ b/src/Cafe/HW/Latte/Core/LatteTextureLegacy.cpp
+@@ -3,6 +3,7 @@
+ #include "Cafe/HW/Latte/Core/LatteShader.h"
+ 
+ #include "Cafe/HW/Latte/Renderer/Renderer.h"
++#include "SwapForceVideoTrace.h"
+ 
+ #ifdef ENABLE_OPENGL
+ #include "Cafe/HW/Latte/Renderer/OpenGL/OpenGLRenderer.h"
+@@ -265,6 +266,14 @@ void LatteTexture_updateTexturesForStage(LatteDecompilerShader* shaderContext, u
+ 			baseTexture->reloadFromDynamicTextures = false;
+ 		}
+ 		LatteTC_MarkTextureStillInUse(baseTexture);
++		auto& sfTrace = SwapForceVideoTrace::Get();
++		if (sfTrace.Match(baseTexture->width, baseTexture->height, baseTexture->format, static_cast<uint32>(baseTexture->tileMode)))
++		{
++			auto e = sfTrace.Begin("draw", baseTexture->physAddress, baseTexture->width, baseTexture->height, baseTexture->pitch,
++				reinterpret_cast<uintptr_t>(baseTexture), baseTexture->reloadCount);
++			e.unit = textureIndex; e.stage = static_cast<uint32>(shaderContext->shaderType);
++			sfTrace.Submit(std::move(e));
++		}
+ 
+ 		// check if barrier is necessary
+ 		if ((sint32)(LatteGPUState.drawCallCounter - baseTexture->lastUnflushedRTDrawcallIndex) < 2)
+diff --git a/src/Cafe/HW/Latte/Core/LatteTextureLoader.cpp b/src/Cafe/HW/Latte/Core/LatteTextureLoader.cpp
+index 03722eb..da9f785 100644
+--- a/src/Cafe/HW/Latte/Core/LatteTextureLoader.cpp
++++ b/src/Cafe/HW/Latte/Core/LatteTextureLoader.cpp
+@@ -2,6 +2,7 @@
+ #include "Cafe/HW/Latte/LatteAddrLib/LatteAddrLib.h"
+ #include "config/ActiveSettings.h"
+ #include "Cafe/CafeSystem.h"
++#include "SwapForceVideoTrace.h"
+ 
+ //#define BENCHMARK_TEXTURE_DECODING		// if defined, time it takes to decode textures will be measured and logged to log.txt
+ 
+@@ -634,6 +635,19 @@ void LatteTextureLoader_UpdateTextureSliceData(LatteTexture* tex, uint32 sliceIn
+ 	uint32 imageSize = texDecoder->calculateImageSize(&textureLoader);
+ 
+ 	uint8* pixelData = (uint8*)g_renderer->texture_acquireTextureUploadBuffer(imageSize);
++	auto& sfTrace = SwapForceVideoTrace::Get();
++	const bool sfMatched = mipIndex == 0 && sliceIndex == 0 && depth == 1 &&
++		sfTrace.Match(textureLoader.width, textureLoader.height, format, static_cast<uint32>(textureLoader.tileMode));
++	SwapForceVideoTrace::Event sfEvent;
++	bool sfSample = false;
++	if (sfMatched)
++	{
++		sfEvent = sfTrace.Begin("upload", physImagePtr, textureLoader.width, textureLoader.height, textureLoader.pitch,
++			reinterpret_cast<uintptr_t>(tex), tex->reloadCount);
++		sfSample = sfTrace.Sample(sfEvent);
++		sfEvent.beforeHash = sfTrace.GuestHash(sfEvent);
++		if (sfSample) sfEvent.before = sfTrace.GuestRows(sfEvent);
++	}
+ 	// decode texture (if data is required)
+ #ifdef BENCHMARK_TEXTURE_DECODING
+ 	LARGE_INTEGER benchmark_begin;
+@@ -645,6 +659,16 @@ void LatteTextureLoader_UpdateTextureSliceData(LatteTexture* tex, uint32 sliceIn
+ 	{
+ 		texDecoder->decode(&textureLoader, pixelData);
+ 	}
++	if (sfSample)
++	{
++		sfEvent.decoded.assign(pixelData, pixelData + imageSize);
++		sfEvent.after = sfTrace.GuestRows(sfEvent);
++	}
++	if (sfMatched)
++	{
++		sfEvent.decodedHash = sfTrace.Hash(sfEvent, pixelData, textureLoader.width);
++		sfEvent.afterHash = sfTrace.GuestHash(sfEvent); sfEvent.endUs = sfTrace.Now();
++	}
+ #ifdef BENCHMARK_TEXTURE_DECODING
+ 	QueryPerformanceCounter(&benchmark_end);
+ 	QueryPerformanceFrequency(&benchmark_freq);
+@@ -681,6 +705,7 @@ void LatteTextureLoader_UpdateTextureSliceData(LatteTexture* tex, uint32 sliceIn
+ 	// load slice
+ 	//debug_printf("[Load Slice] Addr: %08x MIP: %02d Slice: %02d Res %04x/%04x Texel Res %04x/%04x Fmt %04x Tm %d\n", textureLoader.physAddress, mipIndex, sliceIndex, textureLoader.width, textureLoader.height, textureLoader.texelCountX, textureLoader.texelCountY, (int)format, tileMode);
+ 	LatteTextureLoader_loadTextureDataIntoSlice(tex, textureLoader.width, textureLoader.height, depth, mipLevels, pixelData, sliceIndex, mipIndex, imageSize);
++	if (sfMatched) sfTrace.Submit(std::move(sfEvent));
+ 	// write texture dump
+ 	if (textureLoader.dump)
+ 	{
+diff --git a/src/Cafe/OS/libs/coreinit/coreinit_Memory.cpp b/src/Cafe/OS/libs/coreinit/coreinit_Memory.cpp
+index 80ec212..a79274d 100644
+--- a/src/Cafe/OS/libs/coreinit/coreinit_Memory.cpp
++++ b/src/Cafe/OS/libs/coreinit/coreinit_Memory.cpp
+@@ -4,6 +4,7 @@
+ #include "Cafe/OS/RPL/rpl.h"
+ #include "Cafe/GraphicPack/GraphicPack2.h"
+ #include "Cafe/CafeSystem.h"
++#include "Cafe/HW/Latte/Core/SwapForceVideoTrace.h"
+ 
+ namespace coreinit
+ {
+@@ -17,6 +18,8 @@ namespace coreinit
+ 
+ 	void DCFlushRange(MPTR addr, uint32 size)
+ 	{
++		auto& trace = SwapForceVideoTrace::Get();
++		if (trace.Touches(addr, size)) trace.GuestEvent("dc-flush", 0, addr, size);
+ 		MPTR addrEnd = (addr + size + 0x1F) & ~0x1F;
+ 		addr &= ~0x1F;
+ 		LatteBufferCache_notifyDCFlush(addr, addrEnd - addr);
+@@ -24,6 +27,8 @@ namespace coreinit
+ 
+ 	void DCFlushRangeNoSync(MPTR addr, uint32 size)
+ 	{
++		auto& trace = SwapForceVideoTrace::Get();
++		if (trace.Touches(addr, size)) trace.GuestEvent("dc-flush-nosync", 0, addr, size);
+ 		MPTR addrEnd = (addr + size + 0x1F) & ~0x1F;
+ 		addr &= ~0x1F;
+ 		LatteBufferCache_notifyDCFlush(addr, addrEnd - addr);
+@@ -31,6 +36,8 @@ namespace coreinit
+ 
+ 	void DCStoreRange(MPTR addr, uint32 size)
+ 	{
++		auto& trace = SwapForceVideoTrace::Get();
++		if (trace.Touches(addr, size)) trace.GuestEvent("dc-store", 0, addr, size);
+ 		MPTR addrEnd = (addr + size + 0x1F) & ~0x1F;
+ 		addr &= ~0x1F;
+ 		//LatteBufferCache_notifyDCFlush(addr, addrEnd - addr);
+@@ -38,6 +45,8 @@ namespace coreinit
+ 
+ 	void DCStoreRangeNoSync(MPTR addr, uint32 size)
+ 	{
++		auto& trace = SwapForceVideoTrace::Get();
++		if (trace.Touches(addr, size)) trace.GuestEvent("dc-store-nosync", 0, addr, size);
+ 		MPTR addrEnd = (addr + size + 0x1F) & ~0x1F;
+ 		addr &= ~0x1F;
+ 		LatteBufferCache_notifyDCFlush(addr, addrEnd - addr);
+diff --git a/src/Cafe/OS/libs/coreinit/coreinit_Synchronization.cpp b/src/Cafe/OS/libs/coreinit/coreinit_Synchronization.cpp
+index 4f85537..4647afc 100644
+--- a/src/Cafe/OS/libs/coreinit/coreinit_Synchronization.cpp
++++ b/src/Cafe/OS/libs/coreinit/coreinit_Synchronization.cpp
+@@ -4,6 +4,7 @@
+ #include "Cafe/OS/libs/coreinit/coreinit_Alarm.h"
+ #include "Cafe/OS/libs/coreinit/coreinit_Time.h"
+ #include "util/helpers/fspinlock.h"
++#include "Cafe/HW/Latte/Core/SwapForceVideoTrace.h"
+ 
+ namespace coreinit
+ {
+@@ -263,10 +264,12 @@ namespace coreinit
+ 
+ 	void OSLockMutex(OSMutex* mutex)
+ 	{
++		SwapForceVideoTrace::Get().GuestEvent("mutex-lock-enter", MEMPTR<void>(OSGetCurrentThread()).GetMPTR(), MEMPTR<void>(mutex).GetMPTR());
+ 		__OSLockScheduler();
+ 		OSTestThreadCancelInternal();
+ 		OSLockMutexInternal(mutex);
+ 		__OSUnlockScheduler();
++		SwapForceVideoTrace::Get().GuestEvent("mutex-lock-exit", MEMPTR<void>(OSGetCurrentThread()).GetMPTR(), MEMPTR<void>(mutex).GetMPTR());
+ 	}
+ 
+ 	bool OSTryLockMutex(OSMutex* mutex)
+@@ -323,9 +326,11 @@ namespace coreinit
+ 
+ 	void OSUnlockMutex(OSMutex* mutex)
+ 	{
++		SwapForceVideoTrace::Get().GuestEvent("mutex-unlock-enter", MEMPTR<void>(OSGetCurrentThread()).GetMPTR(), MEMPTR<void>(mutex).GetMPTR());
+ 		__OSLockScheduler();
+ 		OSUnlockMutexInternal(mutex);
+ 		__OSUnlockScheduler();
++		SwapForceVideoTrace::Get().GuestEvent("mutex-unlock-exit", MEMPTR<void>(OSGetCurrentThread()).GetMPTR(), MEMPTR<void>(mutex).GetMPTR());
+ 	}
+ 
+ 	/************* OSCond ************/
+diff --git a/src/Cafe/OS/libs/gx2/GX2_Command.cpp b/src/Cafe/OS/libs/gx2/GX2_Command.cpp
+index d12bf21..4d01249 100644
+--- a/src/Cafe/OS/libs/gx2/GX2_Command.cpp
++++ b/src/Cafe/OS/libs/gx2/GX2_Command.cpp
+@@ -10,6 +10,7 @@
+ #include "GX2_Command.h"
+ #include "GX2_Shader.h"
+ #include "GX2_Misc.h"
++#include "Cafe/HW/Latte/Core/SwapForceVideoTrace.h"
+ #include "OS/libs/coreinit/coreinit_MEM.h"
+ 
+ namespace GX2
+@@ -243,7 +244,31 @@ namespace GX2
+ 			submissionFlags |= TCL::TCLSubmissionFlag::NO_MARKER_INTERRUPT;
+ 		submissionFlags |= TCL::TCLSubmissionFlag::USE_RETIRED_MARKER;
+ 
++		SwapForceVideoTrace::Get().CommandSubmit(buffer, memory_virtualToPhysical(MEMPTR<void>(buffer).GetMPTR()), sizeInU32s);
+ 		TCL::TCLSubmitToRing(cmd, cmdLen, &submissionFlags, &s_commandState->lastSubmissionTime);
++		SwapForceVideoTrace::Get().GuestEvent("submit", GX2GetLastSubmittedTimeStamp(), memory_virtualToPhysical(MEMPTR<void>(buffer).GetMPTR()), sizeInU32s * 4);
++		// Local diagnostic only: compare retirement wait with time-only delay at the same site.
++		auto& sfTrace = SwapForceVideoTrace::Get();
++		if (sfTrace.PostMovieWaitEnabled() && sfTrace.IsMovieList(reinterpret_cast<uintptr_t>(buffer)))
++		{
++			uint64 timestamp = GX2GetLastSubmittedTimeStamp();
++			auto start = std::chrono::steady_clock::now();
++			uint32 delayUs = sfTrace.PostMovieDelayUs();
++			if (delayUs)
++				std::this_thread::sleep_for(std::chrono::microseconds(delayUs));
++			else
++				while (GX2GetRetiredTimeStamp() < timestamp && std::chrono::steady_clock::now() - start < std::chrono::seconds(5))
++					std::this_thread::sleep_for(std::chrono::microseconds(50));
++			auto elapsedUs = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - start).count();
++			bool completed = GX2GetRetiredTimeStamp() >= timestamp;
++			static std::atomic<uint64> totalUs{}, incompleteCount{};
++			totalUs += elapsedUs;
++			if (!completed) ++incompleteCount;
++			uint32 count = sfTrace.CountPostMovieWait();
++			if (count == 1 || count % 120 == 0 || (!delayUs && !completed))
++				cemuLog_log(LogType::Force, "Diagnostic movie-list pacing {} timestamp={} delay={}us elapsed={}us completed={} total={}us incomplete={}",
++					count, timestamp, delayUs, elapsedUs, completed, totalUs.load(), incompleteCount.load());
++		}
+ 	}
+ 
+ 	void GX2Command_PadCurrentBuffer()
+@@ -317,8 +342,10 @@ namespace GX2
+ 
+ 	bool GX2WaitTimeStamp(uint64 tsWait)
+ 	{
++		SwapForceVideoTrace::Get().GuestEvent("wait-enter", tsWait);
+ 		// handle GPU timeout here? But for now we timeout after 60 seconds
+ 		TCL::TCLWaitTimestamp(TCL::TCLTimestampId::TIMESTAMP_LAST_BUFFER_RETIRED, tsWait, Espresso::TIMER_CLOCK * 60);
++		SwapForceVideoTrace::Get().GuestEvent("wait-exit", tsWait);
+ 		return true;
+ 	}
+ 
+diff --git a/src/Cafe/OS/libs/gx2/GX2_Event.cpp b/src/Cafe/OS/libs/gx2/GX2_Event.cpp
+index 338b7d7..6f50619 100644
+--- a/src/Cafe/OS/libs/gx2/GX2_Event.cpp
++++ b/src/Cafe/OS/libs/gx2/GX2_Event.cpp
+@@ -8,6 +8,7 @@
+ #include "GX2.h"
+ #include "Cafe/HW/Latte/Renderer/Renderer.h"
+ #include "config/ActiveSettings.h"
++#include "Cafe/HW/Latte/Core/SwapForceVideoTrace.h"
+ #include "util/helpers/ConcurrentQueue.h"
+ 
+ namespace GX2
+@@ -216,6 +217,7 @@ namespace GX2
+ 
+ 	bool GX2DrawDone()
+ 	{
++		SwapForceVideoTrace::Get().GuestEvent("draw-done");
+ 		// optional force full sync (texture readback and occlusion queries)
+ 		bool forceFullSync = false;
+ 		if (g_renderer && g_renderer->GetType() == RendererAPI::Vulkan)
+diff --git a/src/Cafe/OS/libs/gx2/GX2_Texture.cpp b/src/Cafe/OS/libs/gx2/GX2_Texture.cpp
+index b9badbe..712927b 100644
+--- a/src/Cafe/OS/libs/gx2/GX2_Texture.cpp
++++ b/src/Cafe/OS/libs/gx2/GX2_Texture.cpp
+@@ -2,11 +2,13 @@
+ #include "Cafe/HW/Latte/ISA/RegDefines.h"
+ #include "GX2.h"
+ #include "GX2_Texture.h"
++#include "GX2_Command.h"
+ 
+ #include "Cafe/HW/Latte/Core/Latte.h"
+ #include "Cafe/HW/Latte/Core/LatteDraw.h"
+ #include "Cafe/HW/Latte/Core/LattePM4.h"
+ #include "Cafe/HW/Latte/ISA/LatteReg.h"
++#include "Cafe/HW/Latte/Core/SwapForceVideoTrace.h"
+ 
+ namespace GX2
+ {
+@@ -173,6 +175,28 @@ namespace GX2
+ 				mipPtr ^= (swizzle & 0xFFFF);
+ 		}
+ 
++		auto& sfTrace = SwapForceVideoTrace::Get();
++		if (sfTrace.TrackMovieLists() && tex->surface.format == Latte::E_GX2SURFFMT::R8_UNORM &&
++			(tex->surface.tileMode == Latte::E_GX2TILEMODE::TM_LINEAR_GENERAL || tex->surface.tileMode == Latte::E_GX2TILEMODE::TM_LINEAR_ALIGNED))
++		{
++			const auto& cb = s_perCoreCBState[PPCInterpreter_getCurrentCoreIndex()];
++			if (cb.isDisplayList && cb.bufferPtr) sfTrace.NoteMovieList(reinterpret_cast<uintptr_t>(cb.bufferPtr));
++		}
++		if (sfTrace.Match(tex->surface.width, tex->surface.height, tex->surface.format, static_cast<uint32>(tex->surface.tileMode.value())))
++		{
++			auto e = sfTrace.Begin("bind", memory_virtualToPhysical(imagePtr), tex->surface.width, tex->surface.height, tex->surface.pitch);
++			e.unit = textureUnitIndex; e.stage = static_cast<uint32>(baseRegister);
++			sfTrace.GuestContext(e);
++			const auto& cb = s_perCoreCBState[e.core];
++			e.texture = reinterpret_cast<uintptr_t>(cb.bufferPtr);
++			e.value = MEMPTR<void>(cb.currentWritePtr).GetMPTR();
++			e.reload = cb.isDisplayList ? 1 : 0;
++			e.beforeHash = sfTrace.GuestHash(e); e.endUs = sfTrace.Now();
++			sfTrace.DumpCallerCodeOnce(e);
++			if (sfTrace.Sample(e)) { e.before = sfTrace.GuestRows(e); e.after = sfTrace.GuestRows(e); }
++			sfTrace.Submit(std::move(e));
++		}
++
+ 		gx2WriteGather_submit(pm4HeaderType3(IT_SET_RESOURCE, 8),
+ 			baseRegister + textureUnitIndex * 7 - mmSQ_TEX_RESOURCE_WORD0,
+ 			tex->regTexWord0,

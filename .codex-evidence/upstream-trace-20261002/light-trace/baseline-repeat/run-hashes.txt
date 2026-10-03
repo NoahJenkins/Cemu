@@ -1,0 +1,2 @@
+ac1a4dc767e45858c34ae0443b3b3c702b6997051e8009b15aaa1531b4a2fc10  /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_baseline_0a2b6ff
+3a2438ea7505de685dd0cc9756e308e30164f6df730acaf06ba80e1337856524  /home/deck/CemuSwapForceTest/upstream-0a2b6ff-baseline-repeat-20261002/xdg/config/Cemu/gameProfiles/0005000010139200.ini

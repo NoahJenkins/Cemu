@@ -1,0 +1,77 @@
+[18:06:49.735] ------- Init Cemu 2.6 -------
+[18:06:49.738] Init Wii U memory space (base: 0x00007f2450000000)
+[18:06:49.742] mlc01 path: /home/deck/CemuSwapForceTest/upstream-0a2b6ff-installed-audit-multicore-20261002/mlc01
+[18:06:49.742] CPU: AMD Custom APU 0932
+[18:06:49.742] RAM: 14804MB
+[18:06:49.742] Platform: Linux (AppImage)
+[18:06:49.742] Used CPU extensions: SSSE3, SSE4.1, AVX, AVX2, LZCNT, MOVBE, BMI2, AES-NI, INVARIANT-TSC
+[18:06:49.754] IOSU_CRYPTO: No otp.bin found. Online mode cannot be used
+[18:06:49.754] IOSU_CRYPTO: No Seeprom.bin found. Online mode cannot be used
+[18:06:50.121] Mounting title 0005000010139200
+[18:06:50.121] Base: /home/deck/Emulation/roms/wiiu/Skylanders - Swap Force (USA) (EnFrEsPt)/Skylanders - Swap Force (USA) (En,Fr,Es,Pt).wux [WUD]
+[18:06:50.123] Update: Not present
+[18:06:50.123] DLC: Not present
+[18:06:50.252] COS: System fonts found. Generated shareddata (26609KB)
+[18:06:50.266] Recompiler initialized
+[18:06:50.750] ------- Init Vulkan graphics backend -------
+[18:06:50.757] Vulkan instance version: 1.4
+[18:06:50.770] Using GPU: AMD Custom GPU 0932 (RADV VANGOGH)
+[18:06:50.770] Driver version: Mesa 26.2.0-devel (git-035ae2f854)
+[18:06:50.770] Vulkan: present_wait extension: supported
+[18:06:50.770] VulkanLimits: UBAlignment 4 nonCoherentAtomSize 64
+[18:06:50.772] Using available debug function: vkCreateDebugUtilsMessengerEXT()
+[18:06:50.772] Vulkan device memory info:
+[18:06:50.772] Heap 0 - Size 3072MB Flags 0x00000000
+[18:06:50.772] Heap 1 - Size 6144MB Flags 0x00000001
+[18:06:50.772] Memory 0 - HeapIndex 1 Flags 0x00000001
+[18:06:50.772] Memory 1 - HeapIndex 1 Flags 0x00000001
+[18:06:50.772] Memory 2 - HeapIndex 0 Flags 0x00000006
+[18:06:50.772] Memory 3 - HeapIndex 1 Flags 0x00000007
+[18:06:50.772] Memory 4 - HeapIndex 1 Flags 0x00000007
+[18:06:50.772] Memory 5 - HeapIndex 0 Flags 0x0000000e
+[18:06:50.772] Memory 6 - HeapIndex 0 Flags 0x0000000e
+[18:06:50.772] Memory 7 - HeapIndex 1 Flags 0x000000c1
+[18:06:50.772] Memory 8 - HeapIndex 0 Flags 0x000000c6
+[18:06:50.772] Memory 9 - HeapIndex 1 Flags 0x000000c7
+[18:06:50.772] Memory 10 - HeapIndex 0 Flags 0x000000ce
+[18:06:50.772] VK_FORMAT_D24_UNORM_S8_UINT not supported
+[18:06:50.772] VK_FORMAT_R4G4_UNORM_PACK8 not supported
+[18:06:52.447] ------- Loaded title -------
+[18:06:52.447] TitleId: 00050000-10139200
+[18:06:52.447] TitleVersion: v0
+[18:06:52.447] TitleRegion: US
+[18:06:52.447] Save path:   /home/deck/CemuSwapForceTest/upstream-0a2b6ff-installed-audit-multicore-20261002/mlc01/usr/save/00050000/10139200/user/
+[18:06:52.447] Shader cache file: shaderCache/transferable/0005000010139200.bin
+[18:06:52.447] gameprofile path: gameProfiles/0005000010139200.ini
+[18:06:52.447] RPX hash (updated): 6cd668ab
+[18:06:52.447] RPX hash (base): 6cd668ab
+[18:06:52.484] nsyshid::BackendLibusb: device not on whitelist: 28de:1205
+[18:06:52.484] nsyshid::BackendLibusb: device not on whitelist: 1d6b:0002
+[18:06:52.484] nsyshid::BackendLibusb: device not on whitelist: 0bda:8153
+[18:06:52.484] nsyshid::BackendLibusb: device not on whitelist: 05e3:0626
+[18:06:52.484] nsyshid::BackendLibusb: device not on whitelist: 1d6b:0003
+[18:06:52.484] nsyshid::BackendLibusb: device not on whitelist: 05e3:0610
+[18:06:52.484] nsyshid::BackendLibusb: device not on whitelist: 1d6b:0002
+[18:06:52.593] Loaded module 'nova-cafe-fin' with checksum 0xb1f102ec
+[18:06:52.593] RPL link time: 109ms
+[18:06:52.680] HLE scan time: 87ms
+[18:06:52.680] ------- Active settings -------
+[18:06:52.680] CPU-Mode: 3 (gameprofile)
+[18:06:52.680] Load shared libraries: true
+[18:06:52.680] Use precompiled shaders: 0
+[18:06:52.680] Full sync at GX2DrawDone: false
+[18:06:52.680] Strict shader mul: true
+[18:06:52.680] Async compile: true
+[18:06:52.680] Console language: 1
+[18:06:52.985] ------- Activate graphic packs -------
+[18:06:52.992] Applying patch group 'SkylandersSwapForce_V0'
+[18:06:52.992] Activate graphic pack: Skylanders Swap Force/Workarounds/Portal Stability Fix
+[18:06:52.992] ------- Init Audio backend -------
+[18:06:52.992] DirectSound: not supported
+[18:06:52.992] XAudio 2.8: not supported
+[18:06:52.992] XAudio 2.7: not supported
+[18:06:52.992] Cubeb: available
+[18:06:52.992] ------- Init Audio input backend -------
+[18:06:52.992] Cubeb: available
+[18:06:52.992] ------- Run title -------
+[18:06:53.209] IOSU_ACT: using account default in first slot

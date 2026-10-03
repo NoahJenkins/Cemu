@@ -1,0 +1,10 @@
+{
+  "variant": "enabled",
+  "switches": {
+    "CEMU_SWAPFORCE_COMMAND_CHECK": "1"
+  },
+  "trace": false,
+  "cpu_mode": 3,
+  "capture_fps": 24,
+  "duration": 50
+}

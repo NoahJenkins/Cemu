@@ -1,0 +1,99 @@
+[
+  {
+    "variant": "control-before",
+    "config": {
+      "post_movie_submit_wait": false,
+      "trace": false,
+      "cpu_mode": 3
+    },
+    "binary_sha256": "18eb0eca1d437326c78dae0aee3d054f2e7aa6bf11c753acf714ae1f1716f202",
+    "media": "duration=50.000000\nsize=10443047\n",
+    "sampled_video": "color ghosts in transition-contact.png",
+    "logged_waits": []
+  },
+  {
+    "variant": "enabled",
+    "config": {
+      "post_movie_submit_wait": true,
+      "trace": false,
+      "cpu_mode": 3
+    },
+    "binary_sha256": "18eb0eca1d437326c78dae0aee3d054f2e7aa6bf11c753acf714ae1f1716f202",
+    "media": "duration=50.000000\nsize=9703969\n",
+    "sampled_video": "no color ghosts in reviewed 22-30s captured frames",
+    "logged_waits": [
+      {
+        "count": 1,
+        "timestamp": 570,
+        "wait_us": 4398,
+        "completed": true
+      },
+      {
+        "count": 120,
+        "timestamp": 1046,
+        "wait_us": 987,
+        "completed": true
+      },
+      {
+        "count": 240,
+        "timestamp": 1526,
+        "wait_us": 1110,
+        "completed": true
+      },
+      {
+        "count": 360,
+        "timestamp": 2002,
+        "wait_us": 959,
+        "completed": true
+      },
+      {
+        "count": 480,
+        "timestamp": 2482,
+        "wait_us": 928,
+        "completed": true
+      },
+      {
+        "count": 600,
+        "timestamp": 2938,
+        "wait_us": 1801,
+        "completed": true
+      },
+      {
+        "count": 720,
+        "timestamp": 3178,
+        "wait_us": 1403,
+        "completed": true
+      },
+      {
+        "count": 840,
+        "timestamp": 3418,
+        "wait_us": 1434,
+        "completed": true
+      },
+      {
+        "count": 960,
+        "timestamp": 3658,
+        "wait_us": 2173,
+        "completed": true
+      },
+      {
+        "count": 1080,
+        "timestamp": 3898,
+        "wait_us": 1378,
+        "completed": true
+      }
+    ]
+  },
+  {
+    "variant": "control-after",
+    "config": {
+      "post_movie_submit_wait": false,
+      "trace": false,
+      "cpu_mode": 3
+    },
+    "binary_sha256": "18eb0eca1d437326c78dae0aee3d054f2e7aa6bf11c753acf714ae1f1716f202",
+    "media": "duration=50.000000\nsize=10707408\n",
+    "sampled_video": "color ghosts in transition-contact.png",
+    "logged_waits": []
+  }
+]

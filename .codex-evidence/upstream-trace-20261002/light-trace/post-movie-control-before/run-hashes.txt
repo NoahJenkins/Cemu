@@ -1,0 +1,2 @@
+18eb0eca1d437326c78dae0aee3d054f2e7aa6bf11c753acf714ae1f1716f202  /home/deck/.local/share/cemu-native-main-build/upstream-0a2b6ff/bin/Cemu_post_movie_wait_0a2b6ff
+3a2438ea7505de685dd0cc9756e308e30164f6df730acaf06ba80e1337856524  /home/deck/CemuSwapForceTest/upstream-0a2b6ff-control-before-post-movie-20261002/xdg/config/Cemu/gameProfiles/0005000010139200.ini

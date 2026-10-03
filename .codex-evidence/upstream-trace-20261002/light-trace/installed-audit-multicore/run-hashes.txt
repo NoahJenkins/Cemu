@@ -1,0 +1,2 @@
+771c5a10b849d3b64ba5a329e04ca8b3d5e2d279d5d1bac526f593d6fc490a9f  /home/deck/Applications/Cemu.AppImage
+3a2438ea7505de685dd0cc9756e308e30164f6df730acaf06ba80e1337856524  /home/deck/CemuSwapForceTest/upstream-0a2b6ff-installed-audit-multicore-20261002/xdg/config/Cemu/gameProfiles/0005000010139200.ini
